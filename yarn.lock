@@ -1069,6 +1069,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@expo-google-fonts/share-tech-mono@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/share-tech-mono/-/share-tech-mono-0.2.2.tgz#b6143c18d28f41d51875aca014b12ac39225bda5"
+  integrity sha512-kf1XZ2XBa6IYZxFp1OT7SRLKjwQa6G6bQomdDpBHFWT1NXsMWeEaSFCyrSvpFOxVbtQde6BFI8mzsk4s7EW+Gg==
+
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
