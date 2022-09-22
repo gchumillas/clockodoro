@@ -21,6 +21,27 @@ module.exports = {
   plugins: [
     'react'
   ],
+  ignorePatterns: ['*.config.js'],
   rules: {
+    'eqeqeq': 'off',
+    'semi': ['error', 'never'],
+    'quotes': ['error', 'single'],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'no-unused-vars': 'warn',
+    'quote-props': ['error', 'consistent'],
+    'linebreak-style': ['error', 'unix'],
+    'eol-last': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-wrap-multilines': ['error', { return: 'parens-new-line' }],
+    'react/jsx-indent': [2, 2],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-boolean-value': ['error', 'never'],
+    'react/jsx-curly-newline': 'error',
+    'react/jsx-curly-spacing': 'error',
+    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-no-constructed-context-values': 'error',
+    'react/jsx-props-no-multi-spaces': 'error',
+    'react/jsx-tag-spacing': 'error',
+    'react/jsx-closing-bracket-location': 'error'
   }
 }
