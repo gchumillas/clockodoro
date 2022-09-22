@@ -1,28 +1,28 @@
 module.exports = {
-  settings: {
-    react: {
-      version: 'detect'
+  'settings': {
+    'react': {
+      'version': 'detect'
     }
   },
-  env: {
-    browser: true,
-    es2021: true
+  'env': {
+    'browser': true,
+    'es2021': true
   },
-  extends: [
+  'extends': [
     'standard',
     'plugin:react/recommended'
   ],
-  overrides: [
+  'overrides': [
   ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'sourceType': 'module'
   },
-  plugins: [
+  'plugins': [
     'react'
   ],
-  ignorePatterns: ['*.config.js'],
-  rules: {
+  'ignorePatterns': ['*.config.js'],
+  'rules': {
     'eqeqeq': 'off',
     'semi': ['error', 'never'],
     'quotes': ['error', 'single'],
