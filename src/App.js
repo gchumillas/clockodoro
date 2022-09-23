@@ -41,12 +41,13 @@ export default function App () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center'
   },
   text: {
     fontFamily: 'shareTechMono400Regular',
+    color: '#cbd5e1',
     // TODO: (all) allow 'responsive' font-sizes
     fontSize: 80
   }
