@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
+import { normalize } from './libs/normalize'
 
 const Loading = _ => (
   <View
@@ -31,7 +32,7 @@ export default function App () {
   return (
     <View style={styles.container}>
       <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
-        15:45:30
+        15:45
       </Text>
       <StatusBar hidden />
     </View>
@@ -49,7 +50,6 @@ const styles = StyleSheet.create({
     fontFamily: 'shareTechMono400Regular',
     // TODO: create a palette of colors
     color: '#cbd5e1',
-    // TODO: (all) allow 'responsive' font-sizes
-    fontSize: 80
+    fontSize: normalize(60)
   }
 })
