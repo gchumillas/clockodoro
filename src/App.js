@@ -6,23 +6,20 @@ import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
 
-const Loading = _ => {
-  // we can't use tailwind features since it's not yet ready
-  return (
-    <View
-      style={{
-        flex: 1,
-        alignItems:
+const Loading = _ => (
+  <View
+    style={{
+      flex: 1,
+      alignItems:
         'center',
-        justifyContent: 'center',
-        backgroundColor: 'black'
-      }}
-    >
-      <ActivityIndicator size="large" color="white" />
-      <StatusBar style="auto" />
-    </View>
-  )
-}
+      justifyContent: 'center',
+      backgroundColor: 'black'
+    }}
+  >
+    <ActivityIndicator size="large" color="white" />
+    <StatusBar style="auto" />
+  </View>
+)
 
 export default function App () {
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
