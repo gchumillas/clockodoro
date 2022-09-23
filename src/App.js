@@ -17,7 +17,7 @@ const Loading = _ => (
     }}
   >
     <ActivityIndicator size="large" color="white" />
-    <StatusBar style="auto" />
+    <StatusBar style="light" />
   </View>
 )
 
@@ -33,7 +33,7 @@ export default function App () {
       <Text style={styles.text}>
         15:45
       </Text>
-      <StatusBar style="auto" />
+      <StatusBar hidden />
     </View>
   )
 }
