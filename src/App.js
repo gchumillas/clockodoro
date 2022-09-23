@@ -30,8 +30,8 @@ export default function App () {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
-        15:45
+      <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
+        15:45:30
       </Text>
       <StatusBar hidden />
     </View>
