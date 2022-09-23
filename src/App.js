@@ -24,6 +24,18 @@ const Loading = _ => (
 
 export default function App () {
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
+  const [time, setTime] = React.useState('')
+
+  React.useEffect(() => {
+    const i = setInterval(() => {
+      const now = new Date()
+      const hh = `${now.getHours()}`.padStart(2, '0')
+      const mm = `${now.getMinutes()}`.padStart(2, '0')
+      setTime(`${hh}:${mm}`)
+    }, 333)
+
+    return () => clearInterval(i)
+  }, [])
 
   if (!fontsLoaded) {
     return <Loading />
@@ -32,7 +44,7 @@ export default function App () {
   return (
     <View style={styles.container}>
       <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
-        15:45
+        {time}
       </Text>
       <StatusBar hidden />
     </View>
