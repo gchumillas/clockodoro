@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'shareTechMono400Regular',
+    // TODO: create a palette of colors
     color: '#cbd5e1',
     // TODO: (all) allow 'responsive' font-sizes
     fontSize: 80
