@@ -11,7 +11,8 @@ module.exports = {
   'extends': [
     'standard',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
+    'plugin:consistent-default-export-name/fixed'
   ],
   'overrides': [
   ],
@@ -44,6 +45,8 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'error',
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-tag-spacing': 'error',
-    'react/jsx-closing-bracket-location': 'error'
+    'react/jsx-closing-bracket-location': 'error',
+    'consistent-default-export-name/default-export-match-filename': 'error',
+    'consistent-default-export-name/default-import-match-filename': 'error'
   }
 }
