@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text as RNText, StyleSheet } from 'react-native'
-// TODO: use absolute paths
-import { normalize } from '../../libs/normalize'
+import { normalize } from '~/src/libs/normalize'
 
 const Text = ({ fontSize = 18, children }) => {
   return (
