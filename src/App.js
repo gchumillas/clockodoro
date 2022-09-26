@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
+import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
 import {
@@ -23,6 +24,7 @@ const Loading = _ => (
 )
 
 export default function App () {
+  useKeepAwake()
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [time, setTime] = React.useState('')
 

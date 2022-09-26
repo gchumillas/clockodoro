@@ -13,6 +13,7 @@
     "@expo-google-fonts/share-tech-mono": "^0.2.2",
     "expo": "~46.0.9",
     "expo-font": "~10.2.0",
+    "expo-keep-awake": "~10.2.0",
     "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
