@@ -46,7 +46,7 @@ export default function App () {
   return (
     <View style={styles.root}>
       {/* TODO: create AppText */}
-      <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
+      <Text style={styles.time} adjustsFontSizeToFit numberOfLines={1}>
         {time}
       </Text>
       <StatusBar hidden />
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  text: {
+  time: {
     fontFamily: 'shareTechMono400Regular',
     // TODO: create a palette of colors
     color: '#cbd5e1',
