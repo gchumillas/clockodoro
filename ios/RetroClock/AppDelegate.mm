@@ -48,7 +48,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   NSDictionary *initProps = [self prepareInitialProps];
   UIView *rootView = [self.reactDelegate createRootViewWithBridge:bridge moduleName:@"main" initialProperties:initProps];
 
-  rootView.backgroundColor = [UIColor whiteColor];
+  rootView.backgroundColor = [UIColor blackColor];
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [self.reactDelegate createRootViewController];
   rootViewController.view = rootView;
