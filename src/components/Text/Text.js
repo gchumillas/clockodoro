@@ -3,7 +3,6 @@ import { Text as RNText, StyleSheet } from 'react-native'
 // TODO: use absolute paths
 import { normalize } from '../../libs/normalize'
 
-// TODO: install eslint-plugin-consistent-default-export-name
 const Text = ({ fontSize = 18, children }) => {
   return (
     <RNText style={{ ...styles.root, fontSize: normalize(fontSize) }}>
