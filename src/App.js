@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
+import { StyleSheet, View, ActivityIndicator } from 'react-native'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
-import { normalize } from './libs/normalize'
+import AppText from './components/AppText'
 
 const Loading = _ => (
   <View
@@ -45,10 +45,9 @@ export default function App () {
 
   return (
     <View style={styles.root}>
-      {/* TODO: create AppText */}
-      <Text style={styles.time} adjustsFontSizeToFit numberOfLines={1}>
+      <AppText fontSize={60}>
         {time}
-      </Text>
+      </AppText>
       <StatusBar hidden />
     </View>
   )
@@ -60,11 +59,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center'
-  },
-  time: {
-    fontFamily: 'shareTechMono400Regular',
-    // TODO: create a palette of colors
-    color: '#cbd5e1',
-    fontSize: normalize(60)
   }
 })
