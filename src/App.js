@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
+import dayjs from 'dayjs'
 import Text from './components/Text'
 
 const Loading = _ => (
@@ -30,10 +31,8 @@ export default function App () {
 
   React.useEffect(() => {
     const i = setInterval(() => {
-      const now = new Date()
-      const hh = `${now.getHours()}`.padStart(2, '0')
-      const mm = `${now.getMinutes()}`.padStart(2, '0')
-      setTime(`${hh}:${mm}`)
+      const now = dayjs()
+      setTime(now.format('HH:mm'))
     }, 333)
 
     return () => clearInterval(i)
