@@ -44,7 +44,7 @@ export default function App () {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.root}>
       <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
         {time}
       </Text>
@@ -54,7 +54,7 @@ export default function App () {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
     backgroundColor: '#000',
     alignItems: 'center',
