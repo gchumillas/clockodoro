@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/share-tech-mono": "^0.2.2",
+    "dayjs": "^1.11.5",
     "expo": "~46.0.9",
     "expo-font": "~10.2.0",
     "expo-keep-awake": "~10.2.0",
