@@ -45,6 +45,7 @@ export default function App () {
 
   return (
     <View style={styles.root}>
+      {/* TODO: create AppText */}
       <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
         {time}
       </Text>
