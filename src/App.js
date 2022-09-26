@@ -7,7 +7,10 @@ import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
 import dayjs from 'dayjs'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
 import Text from './components/Text'
+
+dayjs.extend(localizedFormat)
 
 const Loading = _ => (
   <View
@@ -28,11 +31,13 @@ export default function App () {
   useKeepAwake()
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [time, setTime] = React.useState('')
+  const [date, setDate] = React.useState('')
 
   React.useEffect(() => {
     const i = setInterval(() => {
       const now = dayjs()
       setTime(now.format('HH:mm'))
+      setDate(now.format('ll'))
     }, 333)
 
     return () => clearInterval(i)
@@ -46,6 +51,9 @@ export default function App () {
     <View style={styles.root}>
       <Text fontSize={60}>
         {time}
+      </Text>
+      <Text>
+        {date}
       </Text>
       <StatusBar hidden />
     </View>
