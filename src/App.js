@@ -6,7 +6,7 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
-import AppText from './components/AppText'
+import Text from './components/Text'
 
 const Loading = _ => (
   <View
@@ -45,9 +45,9 @@ export default function App () {
 
   return (
     <View style={styles.root}>
-      <AppText fontSize={60}>
+      <Text fontSize={60}>
         {time}
-      </AppText>
+      </Text>
       <StatusBar hidden />
     </View>
   )
