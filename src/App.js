@@ -6,11 +6,8 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
-import dayjs from 'dayjs'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
+import dayjs from '~/src/libs/dayjs'
 import Text from './components/Text'
-
-dayjs.extend(localizedFormat)
 
 const Loading = _ => (
   <View
