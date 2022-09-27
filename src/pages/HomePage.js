@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, ActivityIndicator, Pressable } from 'react-native'
+import { StyleSheet, Pressable } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
@@ -11,23 +11,8 @@ import { palette } from '~/src/constants'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
+import Loading from '~/src/components/Loading/Loading'
 import BatteryIcon from '~/src/components/BatteryIcon'
-
-// TODO: move to its own folder
-const Loading = _ => (
-  <View
-    style={{
-      flex: 1,
-      alignItems:
-        'center',
-      justifyContent: 'center',
-      backgroundColor: 'black'
-    }}
-  >
-    <ActivityIndicator size="large" color="white" />
-    <StatusBar style="light" />
-  </View>
-)
 
 const HomePage = () => {
   useKeepAwake()
