@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyleSheet, View, ActivityIndicator } from 'react-native'
+import { StyleSheet, View, ActivityIndicator, Pressable } from 'react-native'
+import { useNavigate } from 'react-router-native'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
@@ -12,6 +13,7 @@ import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
 
+// TODO: move to its own folder
 const Loading = _ => (
   <View
     style={{
@@ -29,6 +31,7 @@ const Loading = _ => (
 
 const HomePage = () => {
   useKeepAwake()
+  const navigate = useNavigate()
   const level = useBatteryLevel()
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [time, setTime] = React.useState('')
@@ -49,7 +52,10 @@ const HomePage = () => {
   }
 
   return (
-    <View style={styles.root}>
+    <Pressable
+      style={({ pressed }) => ({ ...styles.root, opacity: pressed ? 0.7 : 1 })}
+      onPress={() => navigate('/settings')}
+    >
       <Text fontSize={60}>
         {time}
       </Text>
@@ -58,7 +64,7 @@ const HomePage = () => {
       </Text>
       <BatteryIcon value={100 * level} />
       <StatusBar hidden />
-    </View>
+    </Pressable>
   )
 }
 
