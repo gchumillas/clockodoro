@@ -22,3 +22,5 @@ export const colors = {
 export const textColors = {
   base: palette.slate300
 }
+
+export const fontFamily = 'shareTechMono400Regular'

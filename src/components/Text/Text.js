@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text as RNText, StyleSheet } from 'react-native'
-import { textColors } from '~/src/constants'
+import { textColors, fontFamily } from '~/src/constants'
 import { normalize } from '~/src/libs/normalize'
 
 const Text = ({ fontSize = 18, children }) => {
@@ -13,7 +13,7 @@ const Text = ({ fontSize = 18, children }) => {
 
 const styles = StyleSheet.create({
   root: {
-    fontFamily: 'shareTechMono400Regular',
+    fontFamily,
     color: textColors.base
   }
 })
