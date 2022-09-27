@@ -3580,6 +3580,11 @@ expo-asset@~8.6.1:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
+expo-battery@~6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/expo-battery/-/expo-battery-6.3.0.tgz#e2630d85b198b7d46611f5a49f2312631c82f950"
+  integrity sha512-c0mmtfnA9Egq4AIN1DU76DMoJ9y2MQ+WEHEKHq3qrXGCDGRN/a1xrSyBegOAq4rAalOC/aAqszS4WCflSaNSEA==
+
 expo-constants@~13.2.2, expo-constants@~13.2.4:
   version "13.2.4"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-13.2.4.tgz#eab4a553f074b2c60ad7a158d3b82e3484a94606"

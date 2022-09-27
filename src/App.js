@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
+import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
@@ -27,6 +28,7 @@ const Loading = _ => (
 
 export default function App () {
   useKeepAwake()
+  const level = useBatteryLevel()
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
@@ -53,7 +55,7 @@ export default function App () {
       <Text>
         {date}
       </Text>
-      <BatteryIcon value={19} />
+      <BatteryIcon value={100 * level} />
       <StatusBar hidden />
     </View>
   )

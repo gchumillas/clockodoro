@@ -13,6 +13,7 @@
     "@expo-google-fonts/share-tech-mono": "^0.2.2",
     "dayjs": "^1.11.5",
     "expo": "~46.0.9",
+    "expo-battery": "~6.3.0",
     "expo-font": "~10.2.0",
     "expo-keep-awake": "~10.2.0",
     "expo-splash-screen": "~0.16.2",
