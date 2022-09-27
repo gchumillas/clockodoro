@@ -1,1 +1,1 @@
-export { defaul } from './Loading'
+export { default } from './Loading'
