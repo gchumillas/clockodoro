@@ -12,15 +12,15 @@ export const palette = {
  * Semantic colors
  */
 export const colors = {
-  base: palette.slate300,
+  normal: palette.slate300,
   alert: palette.red500
 }
 
 /**
- * Text colors
+ * Font properties
  */
-export const textColors = {
-  base: palette.slate300
+export const font = {
+  family: 'shareTechMono400Regular',
+  size: 18,
+  color: palette.slate300
 }
-
-export const fontFamily = 'shareTechMono400Regular'

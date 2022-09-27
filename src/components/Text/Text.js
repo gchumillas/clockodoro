@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text as RNText, StyleSheet } from 'react-native'
-import { textColors, fontFamily } from '~/src/constants'
+import { font } from '~/src/constants'
 import { normalize } from '~/src/libs/normalize'
 
-const Text = ({ fontSize = 18, children }) => {
+const Text = ({ fontSize = font.size, children }) => {
   return (
     <RNText style={{ ...styles.root, fontSize: normalize(fontSize) }}>
       {children}
@@ -13,8 +13,8 @@ const Text = ({ fontSize = 18, children }) => {
 
 const styles = StyleSheet.create({
   root: {
-    fontFamily,
-    color: textColors.base
+    fontFamily: font.family,
+    color: font.color
   }
 })
 
