@@ -5,7 +5,11 @@ import { normalize } from '~/src/libs/normalize'
 
 const Text = ({ fontSize = font.size, children }) => {
   return (
-    <RNText style={{ ...styles.root, fontSize: normalize(fontSize) }}>
+    <RNText
+      numberOfLines={1}
+      adjustsFontSizeToFit
+      style={{ ...styles.root, fontSize: normalize(fontSize) }}
+    >
       {children}
     </RNText>
   )
