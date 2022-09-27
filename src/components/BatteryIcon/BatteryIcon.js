@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-// import Text from '~/src/components/Text'
+import { colors } from '~/src/constants'
 import Battery0 from '~/assets/images/battery-0.svg'
 import Battery25 from '~/assets/images/battery-25.svg'
 import Battery50 from '~/assets/images/battery-50.svg'
@@ -22,7 +22,7 @@ const BatteryIcon = ({ value }) => {
     return 'full'
   }, [value])
 
-  const color = value < 20 ? '#ef4444' : '#cbd5e1'
+  const color = value < 20 ? colors.alert : colors.base
 
   return (
     <View>

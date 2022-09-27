@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
+import { palette } from '~/src/constants'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
@@ -64,7 +65,7 @@ export default function App () {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: palette.black,
     alignItems: 'center',
     justifyContent: 'center'
   }
