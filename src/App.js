@@ -7,7 +7,8 @@ import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
 import dayjs from '~/src/libs/dayjs'
-import Text from './components/Text'
+import Text from '~/src/components/Text'
+import BatteryIcon from '~/src/components/BatteryIcon'
 
 const Loading = _ => (
   <View
@@ -52,6 +53,7 @@ export default function App () {
       <Text>
         {date}
       </Text>
+      <BatteryIcon value={19} />
       <StatusBar hidden />
     </View>
   )
