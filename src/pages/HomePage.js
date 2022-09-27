@@ -11,7 +11,7 @@ import { palette } from '~/src/constants'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
-import Loading from '~/src/components/Loading/Loading'
+import Loading from '~/src/components/Loading'
 import BatteryIcon from '~/src/components/BatteryIcon'
 
 const HomePage = () => {
