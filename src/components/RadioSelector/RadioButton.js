@@ -20,8 +20,8 @@ const RadioButton = ({ label, value }) => {
       style={styles.root}
     >
       {value == contextValue
-        ? <RadioOn width={28} height={32} fill={colors.normal} />
-        : <RadioOff width={28} height={32} fill={colors.normal} />}
+        ? <RadioOn width={28} height={32} fill={colors.base} />
+        : <RadioOff width={28} height={32} fill={colors.base} />}
       <Text style={styles.label}>{label}</Text>
     </Pressable>
   )

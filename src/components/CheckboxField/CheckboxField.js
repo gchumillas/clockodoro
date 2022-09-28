@@ -20,8 +20,8 @@ const CheckboxField = ({ label, value, onChange, style = {} }) => {
       style={{ ...styles.root, ...style }}
     >
       {value
-        ? <CheckOn width={28} height={32} fill={colors.normal} />
-        : <CheckOff width={28} height={32} fill={colors.normal} />}
+        ? <CheckOn width={28} height={32} fill={colors.base} />
+        : <CheckOff width={28} height={32} fill={colors.base} />}
       <Text style={styles.label}>{label}</Text>
     </Pressable>
   )

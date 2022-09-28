@@ -12,8 +12,7 @@ export const palette = {
  * Semantic colors
  */
 export const colors = {
-  // TODO: rename to base
-  normal: palette.slate300,
+  base: palette.slate300,
   alert: palette.red500
 }
 
