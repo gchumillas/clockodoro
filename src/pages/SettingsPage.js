@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
     margin: 2 * gap
   },
   body: {
-    flexGrow: 1
+    flexGrow: 1,
+    marginTop: 4 * gap
   }
 })
 
