@@ -1,21 +1,22 @@
 import React from 'react'
-import { View, ActivityIndicator } from 'react-native'
+import { View, ActivityIndicator, StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
+import { palette } from '~/src/constants'
 
-// TODO: use StyleSheet.create
 const Loading = _ => (
-  <View
-    style={{
-      flex: 1,
-      alignItems:
-        'center',
-      justifyContent: 'center',
-      backgroundColor: 'black'
-    }}
-  >
+  <View style={styles.root}>
     <ActivityIndicator size="large" color="white" />
     <StatusBar style="light" />
   </View>
 )
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: palette.black
+  }
+})
 
 export default Loading
