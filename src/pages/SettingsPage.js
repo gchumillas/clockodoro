@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
 import { gap } from '~/src/constants'
+import {
+  useTimeFormat, useShowSeconds, useShowDate, useShowBattery
+} from '~/src/store/hooks'
 import RadioSelector, { RadioButton } from '~/src/components/RadioSelector'
 import CheckboxField from '~/src/components/CheckboxField'
 import Button from '~/src/components/Button'
@@ -11,10 +14,10 @@ import Button from '~/src/components/Button'
 const SettingsPage = () => {
   const navigate = useNavigate()
   const { t } = useTranslation('settings')
-  const [timeFormat, setTimeFormat] = React.useState('24h')
-  const [showSeconds, setShowSeconds] = React.useState(false)
-  const [showDate, setShowDate] = React.useState(true)
-  const [showBattery, setShowBattery] = React.useState(true)
+  const [timeFormat, setTimeFormat] = useTimeFormat()
+  const [showSeconds, setShowSeconds] = useShowSeconds()
+  const [showDate, setShowDate] = useShowDate()
+  const [showBattery, setShowBattery] = useShowBattery()
 
   return (
     <SafeAreaView style={styles.root}>

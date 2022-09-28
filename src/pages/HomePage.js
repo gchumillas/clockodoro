@@ -5,10 +5,18 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { palette, supportedLanguages, fallbackLanguage } from '~/src/constants'
+import {
+  useTimeFormat, useShowSeconds, useShowDate, useShowBattery
+} from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
+
+const timeFormats = {
+  '24h': 'HH:mm',
+  'am_pm': 'h:mm a'
+}
 
 const HomePage = () => {
   useKeepAwake()
@@ -17,6 +25,10 @@ const HomePage = () => {
   const level = useBatteryLevel()
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
+  const [timeFormat] = useTimeFormat()
+  const [showSeconds] = useShowSeconds()
+  const [showDate] = useShowDate()
+  const [showBattery] = useShowBattery()
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
@@ -30,13 +42,14 @@ const HomePage = () => {
   React.useEffect(() => {
     const updateTime = () => {
       const now = dayjs()
-      setTime(now.format('HH:mm'))
+      const format = timeFormats[timeFormat] + (showSeconds ? ':ss' : '')
+      setTime(now.format(format))
       setDate(now.format('ll'))
     }
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
-  }, [])
+  }, [timeFormat, showSeconds])
 
   return (
     <Pressable
@@ -46,10 +59,11 @@ const HomePage = () => {
       <Text fontSize={60}>
         {time}
       </Text>
-      <Text>
-        {date}
-      </Text>
-      <BatteryIcon value={100 * level} />
+      {showDate && (
+        <Text>
+          {date}
+        </Text>)}
+      {showBattery && <BatteryIcon value={100 * level} />}
       <StatusBar hidden />
     </Pressable>
   )
