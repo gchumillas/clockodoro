@@ -7,6 +7,7 @@ import {
 import Loading from '~/src/components/Loading'
 import HomePage from '~/src/pages/HomePage'
 import SettingsPage from '~/src/pages/SettingsPage'
+import '~/src/intl'
 
 const App = () => {
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })

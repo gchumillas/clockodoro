@@ -35,6 +35,7 @@ const HomePage = () => {
       <Text fontSize={60}>
         {time}
       </Text>
+      {/* TODO: the date should be printed in the right language */}
       <Text>
         {date}
       </Text>
