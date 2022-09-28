@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { palette, supportedLanguages, fallbackLanguage } from '~/src/constants'
-import { useTimeFormat } from '~/src/store/hooks'
+import { useTimeFormat, useShowDate } from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
@@ -24,6 +24,7 @@ const HomePage = () => {
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
   const [timeFormat] = useTimeFormat()
+  const [showDate] = useShowDate()
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
@@ -53,9 +54,10 @@ const HomePage = () => {
       <Text fontSize={60}>
         {time}
       </Text>
-      <Text>
-        {date}
-      </Text>
+      {showDate && (
+        <Text>
+          {date}
+        </Text>)}
       <BatteryIcon value={100 * level} />
       <StatusBar hidden />
     </Pressable>
