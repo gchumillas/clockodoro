@@ -3,39 +3,29 @@ import { StyleSheet, Pressable } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
-import { useFonts } from 'expo-font'
-import {
-  ShareTechMono_400Regular as shareTechMono400Regular
-} from '@expo-google-fonts/share-tech-mono'
 import { palette } from '~/src/constants'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
-import Loading from '~/src/components/Loading'
 import BatteryIcon from '~/src/components/BatteryIcon'
 
 const HomePage = () => {
   useKeepAwake()
   const navigate = useNavigate()
   const level = useBatteryLevel()
-  // TODO: move this to the App.js file
-  const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
 
   React.useEffect(() => {
-    const i = setInterval(() => {
+    const updateTime = () => {
       const now = dayjs()
       setTime(now.format('HH:mm'))
       setDate(now.format('ll'))
-    }, 333)
-
+    }
+    const i = setInterval(() => updateTime(), 333)
+    updateTime()
     return () => clearInterval(i)
   }, [])
-
-  if (!fontsLoaded) {
-    return <Loading />
-  }
 
   return (
     <Pressable
