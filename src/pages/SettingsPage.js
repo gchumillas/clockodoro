@@ -4,12 +4,25 @@ import { StatusBar } from 'expo-status-bar'
 import CheckboxField from '~/src/components/CheckboxField'
 
 const SettingsPage = () => {
+  const [timeFormat, setTimeFormat] = React.useState('24h')
   const [showSeconds, setShowSeconds] = React.useState(false)
   const [showDate, setShowDate] = React.useState(true)
   const [showBattery, setShowBattery] = React.useState(true)
 
   return (
     <SafeAreaView style={styles.root}>
+      <CheckboxField
+        label="Use 24h format"
+        value={timeFormat == '24h'}
+        onChange={() => setTimeFormat('24h')}
+        style={styles.field}
+      />
+      <CheckboxField
+        label="Use AM|PM format"
+        value={timeFormat == 'am_pm'}
+        onChange={() => setTimeFormat('am_pm')}
+        style={styles.field}
+      />
       <CheckboxField
         label="Show seconds"
         value={showSeconds} onChange={setShowSeconds}
