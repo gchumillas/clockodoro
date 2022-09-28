@@ -29,3 +29,9 @@ export const font = {
  * Minium space between visual elements.
  */
 export const gap = 8
+
+/**
+ * Languages
+ */
+export const supportedLanguages = ['en', 'es']
+export const fallbackLanguage = 'en'
