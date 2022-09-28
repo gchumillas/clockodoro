@@ -1,0 +1,12 @@
+{
+  "common": {
+    "save": "Save"
+  },
+  "settings": {
+    "use 24h format": "Use 24h format",
+    "use am|pm format": "Use AM|PM format",
+    "show seconds": "Show seconds",
+    "show date": "Show date",
+    "show battery": "Show battery"
+  }
+}
