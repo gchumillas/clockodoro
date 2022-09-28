@@ -25,17 +25,20 @@ const SettingsPage = () => {
       />
       <CheckboxField
         label="Show seconds"
-        value={showSeconds} onChange={setShowSeconds}
+        value={showSeconds}
+        onChange={setShowSeconds}
         style={styles.field}
       />
       <CheckboxField
         label="Show date"
-        value={showDate} onChange={setShowDate}
+        value={showDate}
+        onChange={setShowDate}
         style={styles.field}
       />
       <CheckboxField
         label="Show battery"
-        value={showBattery} onChange={setShowBattery}
+        value={showBattery}
+        onChange={setShowBattery}
         style={styles.field}
       />
       <StatusBar style="light" />
