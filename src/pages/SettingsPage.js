@@ -1,6 +1,7 @@
 import React from 'react'
 import { SafeAreaView, View, StyleSheet } from 'react-native'
 import { useNavigate } from 'react-router-native'
+import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
 import { gap } from '~/src/constants'
 import RadioSelector, { RadioButton } from '~/src/components/RadioSelector'
@@ -9,6 +10,7 @@ import Button from '~/src/components/Button'
 
 const SettingsPage = () => {
   const navigate = useNavigate()
+  const { t } = useTranslation('settings')
   const [timeFormat, setTimeFormat] = React.useState('24h')
   const [showSeconds, setShowSeconds] = React.useState(false)
   const [showDate, setShowDate] = React.useState(true)
@@ -18,26 +20,26 @@ const SettingsPage = () => {
     <SafeAreaView style={styles.root}>
       <View style={styles.body}>
         <RadioSelector value={timeFormat} onChange={setTimeFormat}>
-          <RadioButton value="24h" label="Use 24h format" />
-          <RadioButton value="am_pm" label="Use AM|PM format" />
+          <RadioButton value="24h" label={t`use 24h format`} />
+          <RadioButton value="am_pm" label={t`use am|pm format`} />
         </RadioSelector>
         <CheckboxField
-          label="Show seconds"
+          label={t`show seconds`}
           value={showSeconds}
           onChange={setShowSeconds}
         />
         <CheckboxField
-          label="Show date"
+          label={t`show date`}
           value={showDate}
           onChange={setShowDate}
         />
         <CheckboxField
-          label="Show battery"
+          label={t`show battery`}
           value={showBattery}
           onChange={setShowBattery}
         />
       </View>
-      <Button label="Save" onPress={() => navigate('/')} />
+      <Button label={t`save`} onPress={() => navigate('/')} />
       <StatusBar style="light" />
     </SafeAreaView>
   )
