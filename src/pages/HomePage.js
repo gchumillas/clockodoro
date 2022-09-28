@@ -5,7 +5,9 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { palette, supportedLanguages, fallbackLanguage } from '~/src/constants'
-import { useTimeFormat, useShowSeconds, useShowDate, useShowBattery } from '~/src/store/hooks'
+import {
+  useTimeFormat, useShowSeconds, useShowDate, useShowBattery
+} from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
