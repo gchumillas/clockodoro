@@ -1,6 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
+import { gap } from '~/src/constants'
 import RadioSelector, { RadioButton } from '~/src/components/RadioSelector'
 import CheckboxField from '~/src/components/CheckboxField'
 
@@ -42,10 +43,10 @@ const SettingsPage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    margin: 16
+    margin: 2 * gap
   },
   field: {
-    marginBottom: 8
+    marginBottom: gap
   }
 })
 

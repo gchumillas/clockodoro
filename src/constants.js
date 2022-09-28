@@ -24,3 +24,8 @@ export const font = {
   size: 18,
   color: palette.slate300
 }
+
+/**
+ * Minium space between visual elements.
+ */
+export const gap = 8

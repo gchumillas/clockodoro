@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
-import { colors } from '~/src/constants'
+import { colors, gap } from '~/src/constants'
 import CheckOff from '~/assets/images/check-off.svg'
 import CheckOn from '~/assets/images/check-on.svg'
 import Text from '~/src/components/Text'
@@ -32,11 +32,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    // TODO: (all) add spacing to constants.js
-    padding: 8
+    padding: gap
   },
   label: {
-    marginLeft: 10
+    marginLeft: 1.5 * gap
   }
 })
 

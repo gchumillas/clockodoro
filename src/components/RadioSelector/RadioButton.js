@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
-import { colors } from '~/src/constants'
+import { colors, gap } from '~/src/constants'
 import RadioOff from '~/assets/images/radio-off.svg'
 import RadioOn from '~/assets/images/radio-on.svg'
 import Text from '~/src/components/Text'
@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 8,
-    marginBottom: 8
+    padding: gap,
+    marginBottom: gap
   },
   label: {
-    marginLeft: 10
+    marginLeft: 1.5 * gap
   }
 })
 
