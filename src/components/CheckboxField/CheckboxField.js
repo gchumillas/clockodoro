@@ -11,13 +11,12 @@ import Text from '~/src/components/Text'
  * @param {string} params.label
  * @param {boolean} params.value
  * @param {(value: boolean) => void} params.onChange
- * @param {{ [key: string]: any }} [params.style]
  */
-const CheckboxField = ({ label, value, onChange, style = {} }) => {
+const CheckboxField = ({ label, value, onChange }) => {
   return (
     <Pressable
       onPress={() => onChange(value = !value)}
-      style={{ ...styles.root, ...style }}
+      style={styles.root}
     >
       {value
         ? <CheckOn width={28} height={32} fill={colors.base} />
@@ -32,7 +31,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    padding: gap
+    padding: gap,
+    marginBottom: gap
   },
   label: {
     marginLeft: 1.5 * gap

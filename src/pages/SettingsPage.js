@@ -21,19 +21,16 @@ const SettingsPage = () => {
         label="Show seconds"
         value={showSeconds}
         onChange={setShowSeconds}
-        style={styles.field}
       />
       <CheckboxField
         label="Show date"
         value={showDate}
         onChange={setShowDate}
-        style={styles.field}
       />
       <CheckboxField
         label="Show battery"
         value={showBattery}
         onChange={setShowBattery}
-        style={styles.field}
       />
       <StatusBar style="light" />
     </SafeAreaView>
@@ -44,9 +41,6 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     margin: 2 * gap
-  },
-  field: {
-    marginBottom: gap
   }
 })
 
