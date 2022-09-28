@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import { palette, supportedLanguages, fallbackLanguage } from '~/src/constants'
-import { useTimeFormat, useShowDate, useShowBattery } from '~/src/store/hooks'
+import { useTimeFormat, useShowSeconds, useShowDate, useShowBattery } from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
@@ -24,6 +24,7 @@ const HomePage = () => {
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
   const [timeFormat] = useTimeFormat()
+  const [showSeconds] = useShowSeconds()
   const [showDate] = useShowDate()
   const [showBattery] = useShowBattery()
 
@@ -39,13 +40,14 @@ const HomePage = () => {
   React.useEffect(() => {
     const updateTime = () => {
       const now = dayjs()
-      setTime(now.format(timeFormats[timeFormat]))
+      const format = timeFormats[timeFormat] + (showSeconds ? ':ss' : '')
+      setTime(now.format(format))
       setDate(now.format('ll'))
     }
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
-  }, [timeFormat])
+  }, [timeFormat, showSeconds])
 
   return (
     <Pressable
