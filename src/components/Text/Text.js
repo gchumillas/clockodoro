@@ -3,12 +3,12 @@ import { Text as RNText, StyleSheet } from 'react-native'
 import { font } from '~/src/constants'
 import { normalize } from '~/src/libs/normalize'
 
-const Text = ({ fontSize = font.size, children }) => {
+const Text = ({ fontSize = font.size, style = {}, children }) => {
   return (
     <RNText
       numberOfLines={1}
       adjustsFontSizeToFit
-      style={{ ...styles.root, fontSize: normalize(fontSize) }}
+      style={{ ...styles.root, ...style, fontSize: normalize(fontSize) }}
     >
       {children}
     </RNText>
