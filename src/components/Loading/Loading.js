@@ -2,6 +2,7 @@ import React from 'react'
 import { View, ActivityIndicator } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 
+// TODO: use StyleSheet.create
 const Loading = _ => (
   <View
     style={{
