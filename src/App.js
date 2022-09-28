@@ -5,11 +5,11 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
-import Loading from '~/src/components/Loading'
-import HomePage from '~/src/pages/HomePage'
-import SettingsPage from '~/src/pages/SettingsPage'
-import '~/src/intl'
-import store from '~/src/store'
+import Loading from './components/Loading'
+import HomePage from './pages/HomePage'
+import SettingsPage from './pages/SettingsPage'
+import './intl'
+import store from './store'
 
 const App = () => {
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
