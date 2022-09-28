@@ -18,6 +18,7 @@ const HomePage = () => {
   useKeepAwake()
   const navigate = useNavigate()
   const level = useBatteryLevel()
+  // TODO: move this to the App.js file
   const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')

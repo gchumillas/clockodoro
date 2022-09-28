@@ -6,7 +6,6 @@ import { context } from './context'
  * @param {string} params.value
  * @param {(value: string) => void} params.onChange
  * @param {React.ReactNode} params.children
- * @returns
  */
 const RadioSelector = ({ value, onChange, children }) => {
   const contextValue = React.useMemo(
