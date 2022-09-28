@@ -1,6 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
+import RadioSelector, { RadioButton } from '~/src/components/RadioSelector'
 import CheckboxField from '~/src/components/CheckboxField'
 
 const SettingsPage = () => {
@@ -11,18 +12,10 @@ const SettingsPage = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <CheckboxField
-        label="Use 24h format"
-        value={timeFormat == '24h'}
-        onChange={() => setTimeFormat('24h')}
-        style={styles.field}
-      />
-      <CheckboxField
-        label="Use AM|PM format"
-        value={timeFormat == 'am_pm'}
-        onChange={() => setTimeFormat('am_pm')}
-        style={styles.field}
-      />
+      <RadioSelector value={timeFormat} onChange={setTimeFormat}>
+        <RadioButton value="24h" label="Use 24h format" />
+        <RadioButton value="am_pm" label="Use AM|PM format" />
+      </RadioSelector>
       <CheckboxField
         label="Show seconds"
         value={showSeconds}
