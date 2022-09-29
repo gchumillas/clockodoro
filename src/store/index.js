@@ -1,7 +1,7 @@
 import { createStore } from 'redux'
-import { defaultConfig } from '~/src/constants'
+import { DEFAULT_CONFIG } from '~/src/constants'
 
-const reducer = (state = defaultConfig, action) => {
+const reducer = (state = DEFAULT_CONFIG, action) => {
   if (action.type == 'SET_TIME_FORMAT') {
     return {
       ...state,
@@ -27,4 +27,4 @@ const reducer = (state = defaultConfig, action) => {
   return state
 }
 
-export default createStore(reducer, defaultConfig)
+export default createStore(reducer, DEFAULT_CONFIG)

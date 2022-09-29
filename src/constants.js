@@ -45,7 +45,7 @@ export const H24 = '24h'
 /**
  * Config
  */
-export const defaultConfig = {
+export const DEFAULT_CONFIG = {
   timeFormat: H24,
   showSeconds: false,
   showDate: true,

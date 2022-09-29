@@ -1,5 +1,5 @@
 import * as ss from 'expo-secure-store'
-import { AM_PM, H24, defaultConfig } from '~/src/constants'
+import { AM_PM, H24, DEFAULT_CONFIG } from '~/src/constants'
 
 /**
  * @returns {{
@@ -20,19 +20,19 @@ export const getConfig = async () => {
     typeof config.timeFormat != 'string' ||
     ![H24, AM_PM].includes(config.timeFormat)
   ) {
-    config.timeFormat = defaultConfig.timeFormat
+    config.timeFormat = DEFAULT_CONFIG.timeFormat
   }
 
   if (typeof config.showSeconds != 'boolean') {
-    config.showSeconds = defaultConfig.showSeconds
+    config.showSeconds = DEFAULT_CONFIG.showSeconds
   }
 
   if (typeof config.showDate != 'boolean') {
-    config.showDate = defaultConfig.showDate
+    config.showDate = DEFAULT_CONFIG.showDate
   }
 
   if (typeof config.showBattery != 'boolean') {
-    config.showBattery = defaultConfig.showBattery
+    config.showBattery = DEFAULT_CONFIG.showBattery
   }
 
   return config
