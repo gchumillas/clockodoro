@@ -15,7 +15,6 @@ export const getConfig = async () => {
   if (config === null || typeof config != 'object') {
     config = {}
   }
-  console.log(config)
 
   if (
     typeof config.timeFormat != 'string' ||
