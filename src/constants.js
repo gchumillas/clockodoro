@@ -33,7 +33,7 @@ export const GAP = 8
 /**
  * Languages
  */
-export const supportedLanguages = ['en', 'es']
+export const SUPPORTED_LANGUAGES = ['en', 'es']
 export const fallbackLanguage = 'en'
 
 /**
