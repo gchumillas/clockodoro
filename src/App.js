@@ -15,7 +15,8 @@ import SettingsPage from './pages/SettingsPage'
 import './intl'
 import store from './store'
 
-const AppLoadCache = () => {
+const AppLoader = () => {
+  const [fontsLoaded] = useFonts({ shareTechMono400Regular })
   const [configLoading, setConfigLoading] = React.useState(false)
   const [_timeFormat, setTimeFormat] = useTimeFormat()
   const [_showSeconds, setShowSeconds] = useShowSeconds()
@@ -36,7 +37,7 @@ const AppLoadCache = () => {
       })
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (configLoading) {
+  if (!fontsLoaded || configLoading) {
     return <Loading />
   }
 
@@ -51,15 +52,9 @@ const AppLoadCache = () => {
 }
 
 const App = () => {
-  const [fontsLoaded] = useFonts({ shareTechMono400Regular })
-
-  if (!fontsLoaded) {
-    return <Loading />
-  }
-
   return (
     <Provider store={store}>
-      <AppLoadCache />
+      <AppLoader />
     </Provider>
   )
 }
