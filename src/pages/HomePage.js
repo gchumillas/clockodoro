@@ -42,6 +42,7 @@ const HomePage = () => {
   React.useEffect(() => {
     const updateTime = () => {
       const now = dayjs()
+      // TODO: the time format is not properly defined when selecting 24h and "Show seconds"
       const format = timeFormats[timeFormat] + (showSeconds ? ':ss' : '')
       setTime(now.format(format))
       setDate(now.format('ll'))

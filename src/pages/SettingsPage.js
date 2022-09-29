@@ -19,6 +19,7 @@ const SettingsPage = () => {
   const [showDate, setShowDate] = useShowDate()
   const [showBattery, setShowBattery] = useShowBattery()
 
+  // TODO: the view should be scrollable
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.body}>
