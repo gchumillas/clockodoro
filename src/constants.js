@@ -34,7 +34,7 @@ export const GAP = 8
  * Languages
  */
 export const SUPPORTED_LANGUAGES = ['en', 'es']
-export const fallbackLanguage = 'en'
+export const FALLBACK_LANGUAGE = 'en'
 
 /**
  * Date and times

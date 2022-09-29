@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  PALETTE, SUPPORTED_LANGUAGES, fallbackLanguage, AM_PM
+  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, AM_PM
 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -40,7 +40,7 @@ const HomePage = () => {
     if (SUPPORTED_LANGUAGES.includes(lang)) {
       dayjs.locale(lang)
     } else {
-      dayjs.locale(fallbackLanguage)
+      dayjs.locale(FALLBACK_LANGUAGE)
     }
   }, [i18n.resolvedLanguage])
 
