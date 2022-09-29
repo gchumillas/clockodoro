@@ -32,9 +32,11 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'no-unused-vars': [
       'warn',
-      { 'argsIgnorePattern': '^_' },
-      { 'destructuredArrayIgnorePattern': '^_' },
-      { 'varsIgnorePattern': '^_' }
+      {
+        'argsIgnorePattern': '^_',
+        'destructuredArrayIgnorePattern': '^_',
+        'varsIgnorePattern': '^_'
+      }
     ],
     'quote-props': ['error', 'consistent'],
     'linebreak-style': ['error', 'unix'],
