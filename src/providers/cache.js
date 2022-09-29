@@ -1,13 +1,5 @@
 import * as ss from 'expo-secure-store'
-import { AM_PM, H24 } from '~/src/constants'
-
-// TODO: move to constants.js
-const defaultConfig = {
-  timeFormat: H24,
-  showSeconds: false,
-  showDate: true,
-  showBattery: true
-}
+import { AM_PM, H24, defaultConfig } from '~/src/constants'
 
 /**
  * @returns {{

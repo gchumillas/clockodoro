@@ -1,14 +1,7 @@
 import { createStore } from 'redux'
-import { H24 } from '~/src/constants'
+import { defaultConfig } from '~/src/constants'
 
-const initState = {
-  timeFormat: H24,
-  showSeconds: false,
-  showDate: true,
-  showBattery: true
-}
-
-const reducer = (state = initState, action) => {
+const reducer = (state = defaultConfig, action) => {
   if (action.type == 'SET_TIME_FORMAT') {
     return {
       ...state,
@@ -34,4 +27,4 @@ const reducer = (state = initState, action) => {
   return state
 }
 
-export default createStore(reducer, initState)
+export default createStore(reducer, defaultConfig)

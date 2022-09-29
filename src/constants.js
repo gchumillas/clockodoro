@@ -41,3 +41,13 @@ export const fallbackLanguage = 'en'
  */
 export const AM_PM = 'am_pm'
 export const H24 = '24h'
+
+/**
+ * Config
+ */
+export const defaultConfig = {
+  timeFormat: H24,
+  showSeconds: false,
+  showDate: true,
+  showBattery: true
+}
