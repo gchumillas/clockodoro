@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, AM_PM
+  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, AM_PM, GAP
 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -60,7 +60,7 @@ const HomePage = () => {
       style={({ pressed }) => ({ ...styles.root, opacity: pressed ? 0.7 : 1 })}
       onPress={() => navigate('/settings')}
     >
-      <Text fontSize={60}>
+      <Text fontSize={80}>
         {time}
       </Text>
       {showDate && (
@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: PALETTE.black,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: 4 * GAP
   }
 })
 
