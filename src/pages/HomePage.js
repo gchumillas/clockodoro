@@ -60,7 +60,7 @@ const HomePage = () => {
       style={({ pressed }) => ({ ...styles.root, opacity: pressed ? 0.7 : 1 })}
       onPress={() => navigate('/settings')}
     >
-      <Text fontSize={80}>
+      <Text fontSize={75}>
         {time}
       </Text>
       {showDate && (
