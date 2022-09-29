@@ -8,6 +8,14 @@ const defaultConfig = {
   showBattery: true
 }
 
+/**
+ * @returns {{
+ *  timeFormat: '24h' | 'am_pm',
+ *  showSeconds: boolean,
+ *  showDate: boolean,
+ *  showBattery: boolean
+ * }}
+ */
 export const getConfig = async () => {
   const value = await ss.getItemAsync('config')
   let config = JSON.parse(value)
