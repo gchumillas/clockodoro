@@ -25,12 +25,17 @@ module.exports = {
   ],
   'ignorePatterns': ['*.config.js'],
   'rules': {
-    'max-len': ['error', { 'code': 80, 'ignorePattern': 'TODO:' }],
+    'max-len': ['warn', { 'code': 80, 'ignorePattern': 'TODO:' }],
     'eqeqeq': 'off',
     'semi': ['error', 'never'],
     'quotes': ['error', 'single'],
     'jsx-quotes': ['error', 'prefer-double'],
-    'no-unused-vars': 'warn',
+    'no-unused-vars': [
+      'warn',
+      { 'argsIgnorePattern': '^_' },
+      { 'destructuredArrayIgnorePattern': '^_' },
+      { 'varsIgnorePattern': '^_' }
+    ],
     'quote-props': ['error', 'consistent'],
     'linebreak-style': ['error', 'unix'],
     'eol-last': 'off',
