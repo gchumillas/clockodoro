@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
-import { palette, supportedLanguages, fallbackLanguage } from '~/src/constants'
+import {
+  palette, supportedLanguages, fallbackLanguage, AM_PM
+} from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
@@ -26,7 +28,7 @@ const HomePage = () => {
   const [showBattery] = useShowBattery()
 
   const dateFormat = React.useMemo(() => {
-    if (timeFormat == 'am_pm') {
+    if (timeFormat == AM_PM) {
       return showSeconds ? 'h:mm:ss a' : 'h:mm a'
     }
 

@@ -1,8 +1,9 @@
 import * as ss from 'expo-secure-store'
+import { AM_PM, H24 } from '~/src/constants'
 
 // TODO: move to constants.js
 const defaultConfig = {
-  timeFormat: '24h',
+  timeFormat: H24,
   showSeconds: false,
   showDate: true,
   showBattery: true
@@ -10,7 +11,7 @@ const defaultConfig = {
 
 /**
  * @returns {{
- *  timeFormat: '24h' | 'am_pm',
+ *  timeFormat: string,
  *  showSeconds: boolean,
  *  showDate: boolean,
  *  showBattery: boolean
@@ -26,7 +27,7 @@ export const getConfig = async () => {
 
   if (
     typeof config.timeFormat != 'string' ||
-    !['24h', 'am_pm'].includes(config.timeFormat)
+    ![H24, AM_PM].includes(config.timeFormat)
   ) {
     config.timeFormat = defaultConfig.timeFormat
   }
@@ -48,7 +49,7 @@ export const getConfig = async () => {
 
 /**
  * @param {object} config
- * @param {'24h' | 'am_pm'} config.timeFormat
+ * @param {string} config.timeFormat
  * @param {boolean} config.showSeconds
  * @param {boolean} config.showDate
  * @param {boolean} config.showBattery

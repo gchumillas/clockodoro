@@ -3,7 +3,7 @@ import { SafeAreaView, View, StyleSheet } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
-import { gap } from '~/src/constants'
+import { gap, AM_PM, H24 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
@@ -35,8 +35,8 @@ const SettingsPage = () => {
     <SafeAreaView style={styles.root}>
       <View style={styles.body}>
         <RadioSelector value={timeFormat} onChange={setTimeFormat}>
-          <RadioButton value="24h" label={t`use 24h format`} />
-          <RadioButton value="am_pm" label={t`use am|pm format`} />
+          <RadioButton value={H24} label={t`use 24h format`} />
+          <RadioButton value={AM_PM} label={t`use am|pm format`} />
         </RadioSelector>
         <CheckboxField
           label={t`show seconds`}

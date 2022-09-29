@@ -35,3 +35,9 @@ export const gap = 8
  */
 export const supportedLanguages = ['en', 'es']
 export const fallbackLanguage = 'en'
+
+/**
+ * Date and times
+ */
+export const AM_PM = 'am_pm'
+export const H24 = '24h'

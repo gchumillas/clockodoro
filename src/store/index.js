@@ -1,8 +1,8 @@
 import { createStore } from 'redux'
+import { H24 } from '~/src/constants'
 
 const initState = {
-  // TODO: add 24h and am_pm to constants.js
-  timeFormat: '24h',
+  timeFormat: H24,
   showSeconds: false,
   showDate: true,
   showBattery: true
