@@ -3,7 +3,7 @@ import { SafeAreaView, View, StyleSheet } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
-import { gap, AM_PM, H24 } from '~/src/constants'
+import { GAP, AM_PM, H24 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
@@ -63,11 +63,11 @@ const SettingsPage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    margin: 2 * gap
+    margin: 2 * GAP
   },
   body: {
     flexGrow: 1,
-    marginTop: 4 * gap
+    marginTop: 4 * GAP
   }
 })
 

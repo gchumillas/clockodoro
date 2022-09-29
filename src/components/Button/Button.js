@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pressable, StyleSheet } from 'react-native'
 import Text from '~/src/components/Text'
-import { COLORS, gap } from '~/src/constants'
+import { COLORS, GAP } from '~/src/constants'
 
 /**
  * @param {object} params
@@ -22,8 +22,8 @@ const Button = ({ label, onPress }) => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    paddingVertical: 2 * gap,
-    paddingHorizontal: 4 * gap,
+    paddingVertical: 2 * GAP,
+    paddingHorizontal: 4 * GAP,
     borderWidth: 1.5,
     borderColor: COLORS.base,
     borderRadius: 12

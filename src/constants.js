@@ -28,7 +28,7 @@ export const FONT = {
 /**
  * Minium space between visual elements.
  */
-export const gap = 8
+export const GAP = 8
 
 /**
  * Languages
