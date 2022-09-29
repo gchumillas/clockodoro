@@ -64,7 +64,7 @@ const HomePage = () => {
         {time}
       </Text>
       {showDate && (
-        <Text>
+        <Text style={styles.date}>
           {date}
         </Text>)}
       {showBattery && <BatteryIcon value={100 * level} />}
@@ -80,6 +80,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 4 * GAP
+  },
+  date: {
+    marginBottom: 1.5 * GAP
   }
 })
 
