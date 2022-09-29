@@ -13,11 +13,6 @@ import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
 
-const timeFormats = {
-  '24h': 'HH:mm',
-  'am_pm': 'h:mm a'
-}
-
 const HomePage = () => {
   useKeepAwake()
   const { i18n } = useTranslation()
@@ -29,6 +24,14 @@ const HomePage = () => {
   const [showSeconds] = useShowSeconds()
   const [showDate] = useShowDate()
   const [showBattery] = useShowBattery()
+
+  const dateFormat = React.useMemo(() => {
+    if (timeFormat == 'am_pm') {
+      return showSeconds ? 'h:mm:ss a' : 'h:mm a'
+    }
+
+    return showSeconds ? 'HH:mm:ss' : 'HH:mm'
+  }, [timeFormat, showSeconds])
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
@@ -42,15 +45,13 @@ const HomePage = () => {
   React.useEffect(() => {
     const updateTime = () => {
       const now = dayjs()
-      // TODO: the time format is not properly defined when selecting 24h and "Show seconds"
-      const format = timeFormats[timeFormat] + (showSeconds ? ':ss' : '')
-      setTime(now.format(format))
+      setTime(now.format(dateFormat))
       setDate(now.format('ll'))
     }
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
-  }, [timeFormat, showSeconds])
+  }, [dateFormat])
 
   return (
     <Pressable
