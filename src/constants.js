@@ -11,7 +11,7 @@ export const PALETTE = {
 /**
  * Semantic colors
  */
-export const colors = {
+export const COLORS = {
   base: PALETTE.slate300,
   alert: PALETTE.red500
 }

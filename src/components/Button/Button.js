@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pressable, StyleSheet } from 'react-native'
 import Text from '~/src/components/Text'
-import { colors, gap } from '~/src/constants'
+import { COLORS, gap } from '~/src/constants'
 
 /**
  * @param {object} params
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     paddingVertical: 2 * gap,
     paddingHorizontal: 4 * gap,
     borderWidth: 1.5,
-    borderColor: colors.base,
+    borderColor: COLORS.base,
     borderRadius: 12
   }
 })

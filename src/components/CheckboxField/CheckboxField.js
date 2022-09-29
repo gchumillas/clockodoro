@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
-import { colors, gap } from '~/src/constants'
+import { COLORS, gap } from '~/src/constants'
 import CheckOff from '~/assets/images/check-off.svg'
 import CheckOn from '~/assets/images/check-on.svg'
 import Text from '~/src/components/Text'
@@ -18,8 +18,8 @@ const CheckboxField = ({ label, value, onChange }) => {
       style={styles.root}
     >
       {value
-        ? <CheckOn width={28} height={32} fill={colors.base} />
-        : <CheckOff width={28} height={32} fill={colors.base} />}
+        ? <CheckOn width={28} height={32} fill={COLORS.base} />
+        : <CheckOff width={28} height={32} fill={COLORS.base} />}
       <Text style={styles.label}>{label}</Text>
     </Pressable>
   )
