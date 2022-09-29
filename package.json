@@ -17,6 +17,7 @@
     "expo-font": "~10.2.0",
     "expo-keep-awake": "~10.2.0",
     "expo-localization": "~13.1.0",
+    "expo-secure-store": "~11.3.0",
     "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
     "i18next": "^21.9.2",
