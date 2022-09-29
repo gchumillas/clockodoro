@@ -63,7 +63,8 @@ const SettingsPage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    margin: 2 * GAP
+    margin: 2 * GAP,
+    marginTop: 4 * GAP
   },
   body: {
     flexGrow: 1,
