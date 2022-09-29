@@ -22,6 +22,7 @@ export const getConfig = async () => {
   if (config === null || typeof config != 'object') {
     config = {}
   }
+  console.log(config)
 
   if (
     typeof config.timeFormat != 'string' ||
@@ -43,4 +44,15 @@ export const getConfig = async () => {
   }
 
   return config
+}
+
+/**
+ * @param {object} config
+ * @param {'24h' | 'am_pm'} config.timeFormat
+ * @param {boolean} config.showSeconds
+ * @param {boolean} config.showDate
+ * @param {boolean} config.showBattery
+ */
+export const saveConfig = (config) => {
+  return ss.setItemAsync('config', JSON.stringify(config))
 }

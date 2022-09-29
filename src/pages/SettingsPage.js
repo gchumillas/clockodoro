@@ -10,6 +10,7 @@ import {
 import RadioSelector, { RadioButton } from '~/src/components/RadioSelector'
 import CheckboxField from '~/src/components/CheckboxField'
 import Button from '~/src/components/Button'
+import { saveConfig } from '../providers/cache'
 
 const SettingsPage = () => {
   const navigate = useNavigate()
@@ -18,6 +19,16 @@ const SettingsPage = () => {
   const [showSeconds, setShowSeconds] = useShowSeconds()
   const [showDate, setShowDate] = useShowDate()
   const [showBattery, setShowBattery] = useShowBattery()
+
+  const doSave = () => {
+    saveConfig({
+      timeFormat,
+      showSeconds,
+      showDate,
+      showBattery
+    })
+    navigate('/')
+  }
 
   // TODO: the view should be scrollable
   return (
@@ -43,7 +54,7 @@ const SettingsPage = () => {
           onChange={setShowBattery}
         />
       </View>
-      <Button label={t`save`} onPress={() => navigate('/')} />
+      <Button label={t`save`} onPress={doSave} />
       <StatusBar style="light" />
     </SafeAreaView>
   )
