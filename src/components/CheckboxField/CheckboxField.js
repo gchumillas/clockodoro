@@ -5,7 +5,6 @@ import CheckOff from '~/assets/images/check-off.svg'
 import CheckOn from '~/assets/images/check-on.svg'
 import Text from '~/src/components/Text'
 
-// TODO: (all) add inline doc to all components
 /**
  * @param {object} params
  * @param {string} params.label

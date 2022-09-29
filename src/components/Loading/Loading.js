@@ -3,7 +3,7 @@ import { View, ActivityIndicator, StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 import { palette } from '~/src/constants'
 
-const Loading = _ => (
+const Loading = () => (
   <View style={styles.root}>
     <ActivityIndicator size="large" color="white" />
     <StatusBar style="light" />

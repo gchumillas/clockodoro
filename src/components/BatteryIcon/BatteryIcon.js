@@ -7,6 +7,10 @@ import Battery50 from '~/assets/images/battery-50.svg'
 import Battery75 from '~/assets/images/battery-75.svg'
 import Battery100 from '~/assets/images/battery-100.svg'
 
+/**
+ * @param {object} params
+ * @param {number} params.value A number between 0 and 100
+ */
 const BatteryIcon = ({ value }) => {
   const level = React.useMemo(() => {
     if (value < 12.5) {
