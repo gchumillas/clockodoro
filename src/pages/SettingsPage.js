@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, View, StyleSheet } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
@@ -33,7 +33,7 @@ const SettingsPage = () => {
   // TODO: the view should be scrollable
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.body}>
+      <ScrollView style={styles.body}>
         <RadioSelector value={timeFormat} onChange={setTimeFormat}>
           <RadioButton value={H24} label={t`use 24h format`} />
           <RadioButton value={AM_PM} label={t`use am|pm format`} />
@@ -53,7 +53,7 @@ const SettingsPage = () => {
           value={showBattery}
           onChange={setShowBattery}
         />
-      </View>
+      </ScrollView>
       <Button label={t`save`} onPress={doSave} />
       <StatusBar style="light" />
     </SafeAreaView>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   body: {
     flexGrow: 1,
-    marginTop: 4 * GAP
+    marginVertical: 2 * GAP
   }
 })
 
