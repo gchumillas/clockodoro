@@ -2,7 +2,7 @@
  * Color palette inspired in TailwindCSS colors:
  * https://tailwindcss.com/docs/customizing-colors
  */
-export const palette = {
+export const PALETTE = {
   black: '#000000',
   slate300: '#cbd5e1',
   red500: '#ef4444'
@@ -12,8 +12,8 @@ export const palette = {
  * Semantic colors
  */
 export const colors = {
-  base: palette.slate300,
-  alert: palette.red500
+  base: PALETTE.slate300,
+  alert: PALETTE.red500
 }
 
 /**
@@ -22,7 +22,7 @@ export const colors = {
 export const font = {
   family: 'shareTechMono400Regular',
   size: 18,
-  color: palette.slate300
+  color: PALETTE.slate300
 }
 
 /**

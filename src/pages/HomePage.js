@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  palette, supportedLanguages, fallbackLanguage, AM_PM
+  PALETTE, supportedLanguages, fallbackLanguage, AM_PM
 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -76,7 +76,7 @@ const HomePage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: palette.black,
+    backgroundColor: PALETTE.black,
     alignItems: 'center',
     justifyContent: 'center'
   }

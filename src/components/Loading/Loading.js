@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, ActivityIndicator, StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
-import { palette } from '~/src/constants'
+import { PALETTE } from '~/src/constants'
 
 const Loading = () => (
   <View style={styles.root}>
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: palette.black
+    backgroundColor: PALETTE.black
   }
 })
 
