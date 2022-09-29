@@ -19,7 +19,7 @@ export const COLORS = {
 /**
  * Font properties
  */
-export const font = {
+export const FONT = {
   family: 'shareTechMono400Regular',
   size: 18,
   color: PALETTE.slate300
