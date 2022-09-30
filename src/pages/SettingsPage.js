@@ -1,9 +1,9 @@
 import React from 'react'
-import { SafeAreaView, ScrollView, StyleSheet } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
-import { GAP, AM_PM, H24 } from '~/src/constants'
+import { PALETTE, GAP, AM_PM, H24 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
@@ -33,28 +33,30 @@ const SettingsPage = () => {
   // TODO: the view should be scrollable
   return (
     <SafeAreaView style={styles.root}>
-      <ScrollView style={styles.body}>
-        <RadioSelector value={timeFormat} onChange={setTimeFormat}>
-          <RadioButton value={H24} label={t`use 24h format`} />
-          <RadioButton value={AM_PM} label={t`use am|pm format`} />
-        </RadioSelector>
-        <CheckboxField
-          label={t`show seconds`}
-          value={showSeconds}
-          onChange={setShowSeconds}
-        />
-        <CheckboxField
-          label={t`show date`}
-          value={showDate}
-          onChange={setShowDate}
-        />
-        <CheckboxField
-          label={t`show battery`}
-          value={showBattery}
-          onChange={setShowBattery}
-        />
-      </ScrollView>
-      <Button label={t`save`} onPress={doSave} />
+      <View style={styles.wrapper}>
+        <ScrollView style={styles.body}>
+          <RadioSelector value={timeFormat} onChange={setTimeFormat}>
+            <RadioButton value={H24} label={t`use 24h format`} />
+            <RadioButton value={AM_PM} label={t`use am|pm format`} />
+          </RadioSelector>
+          <CheckboxField
+            label={t`show seconds`}
+            value={showSeconds}
+            onChange={setShowSeconds}
+          />
+          <CheckboxField
+            label={t`show date`}
+            value={showDate}
+            onChange={setShowDate}
+          />
+          <CheckboxField
+            label={t`show battery`}
+            value={showBattery}
+            onChange={setShowBattery}
+          />
+        </ScrollView>
+        <Button label={t`save`} onPress={doSave} />
+      </View>
       <StatusBar style="light" />
     </SafeAreaView>
   )
@@ -62,9 +64,13 @@ const SettingsPage = () => {
 
 const styles = StyleSheet.create({
   root: {
+    flex: 1
+  },
+  wrapper: {
     flex: 1,
-    margin: 2 * GAP,
-    marginTop: 4 * GAP
+    padding: 2 * GAP,
+    paddingTop: 4 * GAP,
+    backgroundColor: PALETTE.black
   },
   body: {
     flexGrow: 1,
