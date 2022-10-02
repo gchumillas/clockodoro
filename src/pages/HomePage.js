@@ -15,8 +15,7 @@ import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
-// TODO: rename images.svg by images-icon.svg
-import Settings from '~/assets/images/settings.svg'
+import SettingsIcon from '~/assets/images/settings-icon.svg'
 
 const HomePage = () => {
   useKeepAwake()
@@ -82,7 +81,7 @@ const HomePage = () => {
             })}
             onPress={() => navigate('/settings')}
           >
-            <Settings width={36} height={32} fill={COLORS.base} />
+            <SettingsIcon width={36} height={32} fill={COLORS.base} />
           </Pressable>
         )}
       </View>

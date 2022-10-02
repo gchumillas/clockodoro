@@ -1,11 +1,11 @@
 import React from 'react'
 import { View } from 'react-native'
 import { COLORS } from '~/src/constants'
-import Battery0 from '~/assets/images/battery-0.svg'
-import Battery25 from '~/assets/images/battery-25.svg'
-import Battery50 from '~/assets/images/battery-50.svg'
-import Battery75 from '~/assets/images/battery-75.svg'
-import Battery100 from '~/assets/images/battery-100.svg'
+import Battery0Icon from '~/assets/images/battery-0-icon.svg'
+import Battery25Icon from '~/assets/images/battery-25-icon.svg'
+import Battery50Icon from '~/assets/images/battery-50-icon.svg'
+import Battery75Icon from '~/assets/images/battery-75-icon.svg'
+import Battery100Icon from '~/assets/images/battery-100-icon.svg'
 
 /**
  * @param {object} params
@@ -31,19 +31,19 @@ const BatteryIcon = ({ value }) => {
   return (
     <View>
       {level == 'empty' && (
-        <Battery0 width={36} height={32} fill={color} />
+        <Battery0Icon width={36} height={32} fill={color} />
       )}
       {level == 'low' && (
-        <Battery25 width={36} height={32} fill={color} />
+        <Battery25Icon width={36} height={32} fill={color} />
       )}
       {level == 'medium' && (
-        <Battery50 width={36} height={32} fill={color} />
+        <Battery50Icon width={36} height={32} fill={color} />
       )}
       {level == 'high' && (
-        <Battery75 width={36} height={32} fill={color} />
+        <Battery75Icon width={36} height={32} fill={color} />
       )}
       {level == 'full' && (
-        <Battery100 width={36} height={32} fill={color} />
+        <Battery100Icon width={36} height={32} fill={color} />
       )}
     </View>
   )

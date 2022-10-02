@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import { COLORS, GAP } from '~/src/constants'
-import RadioOff from '~/assets/images/radio-off.svg'
-import RadioOn from '~/assets/images/radio-on.svg'
+import RadioOffIcon from '~/assets/images/radio-off-icon.svg'
+import RadioOnIcon from '~/assets/images/radio-on-icon.svg'
 import Text from '~/src/components/Text'
 import { context } from './context'
 
@@ -20,8 +20,8 @@ const RadioButton = ({ label, value }) => {
       style={styles.root}
     >
       {value == contextValue
-        ? <RadioOn width={28} height={32} fill={COLORS.base} />
-        : <RadioOff width={28} height={32} fill={COLORS.base} />}
+        ? <RadioOnIcon width={28} height={32} fill={COLORS.base} />
+        : <RadioOffIcon width={28} height={32} fill={COLORS.base} />}
       <Text style={styles.label}>{label}</Text>
     </Pressable>
   )
