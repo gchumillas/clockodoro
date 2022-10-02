@@ -1,2 +1,2 @@
-# retroclock
-A digital retro clock written in React Native
+# Clockodoro
+A digital clock written in React Native
