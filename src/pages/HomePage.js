@@ -11,6 +11,7 @@ import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
+import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
@@ -21,6 +22,7 @@ const HomePage = () => {
   useKeepAwake()
   const { i18n } = useTranslation()
   const navigate = useNavigate()
+  const orientation = useOrientation()
   const level = useBatteryLevel()
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
@@ -72,15 +74,17 @@ const HomePage = () => {
       </View>
       <View style={styles.box}>
         {/* TODO: make an IconButton */}
-        <Pressable
-          style={({ pressed }) => ({
-            ...styles.button,
-            opacity: pressed ? 0.7 : 1
-          })}
-          onPress={() => navigate('/settings')}
-        >
-          <Settings width={36} height={32} fill={COLORS.base} />
-        </Pressable>
+        {orientation == 'portrait' && (
+          <Pressable
+            style={({ pressed }) => ({
+              ...styles.button,
+              opacity: pressed ? 0.7 : 1
+            })}
+            onPress={() => navigate('/settings')}
+          >
+            <Settings width={36} height={32} fill={COLORS.base} />
+          </Pressable>
+        )}
       </View>
       <StatusBar hidden />
     </SafeAreaView>
