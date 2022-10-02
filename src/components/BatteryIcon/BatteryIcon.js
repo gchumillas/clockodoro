@@ -26,7 +26,7 @@ const BatteryIcon = ({ value }) => {
     return 'full'
   }, [value])
 
-  const color = value < 20 ? COLORS.alert : COLORS.base
+  const color = value > 20 ? COLORS.base : COLORS.alert
 
   return (
     <View>
