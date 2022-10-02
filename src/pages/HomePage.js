@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, SafeAreaView, View, Pressable } from 'react-native'
+import { StyleSheet, SafeAreaView, View } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
@@ -14,6 +14,7 @@ import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
+import IconButton from '~/src/components/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
@@ -74,15 +75,10 @@ const HomePage = () => {
       <View style={styles.box}>
         {/* TODO: make an IconButton */}
         {orientation == 'portrait' && (
-          <Pressable
-            style={({ pressed }) => ({
-              ...styles.button,
-              opacity: pressed ? 0.7 : 1
-            })}
+          <IconButton
+            icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
             onPress={() => navigate('/settings')}
-          >
-            <SettingsIcon width={36} height={32} fill={COLORS.base} />
-          </Pressable>
+          />
         )}
       </View>
       <StatusBar hidden />
@@ -94,8 +90,6 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: PALETTE.black,
-    alignItems: 'center',
-    justifyContent: 'center',
     padding: 4 * GAP
   },
   box: {
@@ -105,9 +99,6 @@ const styles = StyleSheet.create({
   },
   date: {
     marginBottom: 1.5 * GAP
-  },
-  button: {
-    padding: 1.5 * GAP
   }
 })
 
