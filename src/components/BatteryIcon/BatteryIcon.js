@@ -1,11 +1,11 @@
 import React from 'react'
 import { View } from 'react-native'
 import { COLORS } from '~/src/constants'
-import Battery0Icon from '~/assets/images/battery-0-icon.svg'
-import Battery25Icon from '~/assets/images/battery-25-icon.svg'
-import Battery50Icon from '~/assets/images/battery-50-icon.svg'
-import Battery75Icon from '~/assets/images/battery-75-icon.svg'
-import Battery100Icon from '~/assets/images/battery-100-icon.svg'
+import Battery0Icon from '~/assets/icons/battery-0-icon.svg'
+import Battery25Icon from '~/assets/icons/battery-25-icon.svg'
+import Battery50Icon from '~/assets/icons/battery-50-icon.svg'
+import Battery75Icon from '~/assets/icons/battery-75-icon.svg'
+import Battery100Icon from '~/assets/icons/battery-100-icon.svg'
 
 /**
  * @param {object} params

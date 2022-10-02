@@ -15,7 +15,7 @@ import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
-import SettingsIcon from '~/assets/images/settings-icon.svg'
+import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
 const HomePage = () => {
   useKeepAwake()

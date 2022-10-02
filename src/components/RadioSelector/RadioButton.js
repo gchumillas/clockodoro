@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import { COLORS, GAP } from '~/src/constants'
-import RadioOffIcon from '~/assets/images/radio-off-icon.svg'
-import RadioOnIcon from '~/assets/images/radio-on-icon.svg'
+import RadioOffIcon from '~/assets/icons/radio-off-icon.svg'
+import RadioOnIcon from '~/assets/icons/radio-on-icon.svg'
 import Text from '~/src/components/Text'
 import { context } from './context'
 

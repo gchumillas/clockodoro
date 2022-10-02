@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import { COLORS, GAP } from '~/src/constants'
-import CheckOffIcon from '~/assets/images/check-off-icon.svg'
-import CheckOnIcon from '~/assets/images/check-on-icon.svg'
+import CheckOffIcon from '~/assets/icons/check-off-icon.svg'
+import CheckOnIcon from '~/assets/icons/check-on-icon.svg'
 import Text from '~/src/components/Text'
 
 /**
