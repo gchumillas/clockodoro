@@ -59,7 +59,8 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View>
+      <View style={styles.box} />
+      <View style={styles.box}>
         <Text fontSize={75}>
           {time}
         </Text>
@@ -69,7 +70,7 @@ const HomePage = () => {
         </Text>)}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
-      <View>
+      <View style={styles.box}>
         <Pressable
           style={({ pressed }) => ({
             ...styles.button,
@@ -92,6 +93,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 4 * GAP
+  },
+  box: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   date: {
     marginBottom: 1.5 * GAP
