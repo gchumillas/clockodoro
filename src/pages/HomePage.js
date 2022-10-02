@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, Pressable } from 'react-native'
+import { StyleSheet, SafeAreaView, View, Pressable } from 'react-native'
 import { useNavigate } from 'react-router-native'
 import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, AM_PM, GAP
+  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, AM_PM, GAP, COLORS
 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -14,6 +14,8 @@ import { useBatteryLevel } from '~/src/libs/battery'
 import dayjs from '~/src/libs/dayjs'
 import Text from '~/src/components/Text'
 import BatteryIcon from '~/src/components/BatteryIcon'
+// TODO: rename images.svg by images-icon.svg
+import Settings from '~/assets/images/settings.svg'
 
 const HomePage = () => {
   useKeepAwake()
@@ -56,20 +58,30 @@ const HomePage = () => {
   }, [dateFormat])
 
   return (
-    <Pressable
-      style={({ pressed }) => ({ ...styles.root, opacity: pressed ? 0.7 : 1 })}
-      onPress={() => navigate('/settings')}
-    >
-      <Text fontSize={75}>
-        {time}
-      </Text>
-      {showDate && (
+    <SafeAreaView style={styles.root}>
+      <View>
+        <Text fontSize={75}>
+          {time}
+        </Text>
+        {showDate && (
         <Text style={styles.date}>
           {date}
         </Text>)}
-      {showBattery && <BatteryIcon value={100 * level} />}
+        {showBattery && <BatteryIcon value={100 * level} />}
+      </View>
+      <View>
+        <Pressable
+          style={({ pressed }) => ({
+            ...styles.button,
+            opacity: pressed ? 0.7 : 1
+          })}
+          onPress={() => navigate('/settings')}
+        >
+          <Settings width={36} height={32} fill={COLORS.base} />
+        </Pressable>
+      </View>
       <StatusBar hidden />
-    </Pressable>
+    </SafeAreaView>
   )
 }
 
@@ -83,6 +95,9 @@ const styles = StyleSheet.create({
   },
   date: {
     marginBottom: 1.5 * GAP
+  },
+  button: {
+    padding: 1.5 * GAP
   }
 })
 
