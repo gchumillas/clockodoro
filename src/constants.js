@@ -1,7 +1,9 @@
 /**
- * Color palette inspired in TailwindCSS colors:
- * https://tailwindcss.com/docs/customizing-colors
+ * Colors
  */
+
+// Color palette inspired in TailwindCSS colors:
+// https://tailwindcss.com/docs/customizing-colors
 export const PALETTE = {
   black: '#000000',
   white: '#ffffff',
@@ -9,17 +11,17 @@ export const PALETTE = {
   red500: '#ef4444'
 }
 
-/**
- * Semantic colors
- */
+// Semantic colors
 export const COLORS = {
   base: PALETTE.slate300,
   alert: PALETTE.red500
 }
 
 /**
- * Available fonts
+ * Fonts
  */
+
+// Available fonts
 export const FONTS = [
   'shareTechMono400Regular',
   'audiowide400Regular',
@@ -27,9 +29,7 @@ export const FONTS = [
   'rye400Regular'
 ]
 
-/**
- * Font properties
- */
+// System font
 export const FONT = {
   family: 'shareTechMono400Regular',
   size: 18,
@@ -37,13 +37,9 @@ export const FONT = {
 }
 
 /**
- * Minium space between visual elements.
+ * Metrics (spaces, borders, etc).
  */
 export const GAP = 8
-
-/**
- * Border radius.
- */
 export const BORDER_RADIUS = 10
 
 /**
