@@ -1,7 +1,9 @@
 /**
- * Color palette inspired in TailwindCSS colors:
- * https://tailwindcss.com/docs/customizing-colors
+ * Colors
  */
+
+// Color palette inspired in TailwindCSS colors:
+// https://tailwindcss.com/docs/customizing-colors
 export const PALETTE = {
   black: '#000000',
   white: '#ffffff',
@@ -9,17 +11,25 @@ export const PALETTE = {
   red500: '#ef4444'
 }
 
-/**
- * Semantic colors
- */
+// Semantic colors
 export const COLORS = {
   base: PALETTE.slate300,
   alert: PALETTE.red500
 }
 
 /**
- * Font properties
+ * Fonts
  */
+
+// Available fonts
+export const FONTS = [
+  'shareTechMono400Regular',
+  'audiowide400Regular',
+  'frederickaTheGreat400Regular',
+  'rye400Regular'
+]
+
+// System font
 export const FONT = {
   family: 'shareTechMono400Regular',
   size: 18,
@@ -27,13 +37,9 @@ export const FONT = {
 }
 
 /**
- * Minium space between visual elements.
+ * Metrics (spaces, borders, etc).
  */
 export const GAP = 8
-
-/**
- * Border radius.
- */
 export const BORDER_RADIUS = 10
 
 /**
@@ -52,6 +58,7 @@ export const H24 = '24h'
  * Config
  */
 export const DEFAULT_CONFIG = {
+  timeFont: 'shareTechMono400Regular',
   timeFormat: H24,
   showSeconds: false,
   showDate: true,

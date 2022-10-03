@@ -8,7 +8,7 @@ import {
   PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP, COLORS
 } from '~/src/constants'
 import {
-  useTimeFormat, useShowSeconds, useShowDate, useShowBattery
+  useTimeFormat, useShowSeconds, useShowDate, useShowBattery, useTimeFont
 } from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
@@ -28,10 +28,11 @@ const HomePage = () => {
   const level = useBatteryLevel()
   const [showModalMenu, setShowModalMenu] = React.useState(false)
   const [time, setTime] = React.useState(dayjs())
-  const [timeFormat] = useTimeFormat()
-  const [showSeconds] = useShowSeconds()
-  const [showDate] = useShowDate()
-  const [showBattery] = useShowBattery()
+  const { timeFont } = useTimeFont()
+  const { timeFormat } = useTimeFormat()
+  const { showSeconds } = useShowSeconds()
+  const { showDate } = useShowDate()
+  const { showBattery } = useShowBattery()
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
@@ -56,6 +57,7 @@ const HomePage = () => {
           value={time}
           format={timeFormat}
           showSeconds={showSeconds}
+          font={timeFont}
           style={styles.time}
         />
         {showDate && <DateDisplay value={time} style={styles.date} />}
@@ -68,7 +70,8 @@ const HomePage = () => {
         />
       )}
       <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
-        <MenuItem label="Settings" onPress={() => navigate('/settings')} />
+        {/* TODO: use translations */}
+        <MenuItem label="Preferences" onPress={() => navigate('/settings')} />
         <MenuItem label="Fonts" onPress={() => navigate('/fonts')} />
         <MenuItem label="Colors" onPress={() => navigate('/colors')} />
       </ModalMenu>

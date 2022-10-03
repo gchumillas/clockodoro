@@ -1,5 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux'
 
+export const useTimeFont = _ => {
+  const dispatch = useDispatch()
+  const timeFont = useSelector(state => state.timeFont)
+  const setTimeFont = (payload) => dispatch(
+    { type: 'SET_TIME_FONT', payload }
+  )
+
+  return { timeFont, setTimeFont }
+}
+
 export const useTimeFormat = _ => {
   const dispatch = useDispatch()
   const timeFormat = useSelector(state => state.timeFormat)
@@ -7,7 +17,7 @@ export const useTimeFormat = _ => {
     { type: 'SET_TIME_FORMAT', payload }
   )
 
-  return [timeFormat, setTimeFormat]
+  return { timeFormat, setTimeFormat }
 }
 
 export const useShowSeconds = _ => {
@@ -17,7 +27,7 @@ export const useShowSeconds = _ => {
     { type: 'SET_SHOW_SECONDS', payload }
   )
 
-  return [showSeconds, setShowSeconds]
+  return { showSeconds, setShowSeconds }
 }
 
 export const useShowDate = _ => {
@@ -27,7 +37,7 @@ export const useShowDate = _ => {
     { type: 'SET_SHOW_DATE', payload }
   )
 
-  return [showDate, setShowDate]
+  return { showDate, setShowDate }
 }
 
 export const useShowBattery = _ => {
@@ -37,5 +47,5 @@ export const useShowBattery = _ => {
     { type: 'SET_SHOW_BATTERY', payload }
   )
 
-  return [showBattery, setShowBattery]
+  return { showBattery, setShowBattery }
 }

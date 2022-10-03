@@ -7,9 +7,16 @@ import Text from '~/src/components/outputs/Text'
  * @param {dayjs.Dayjs} params.value
  * @param {'am_pm' | '24h'} params.format
  * @param {boolean} params.showSeconds
+ * @param {string} [params.font]
  * @param {object} [params.style]
  */
-const TimeDisplay = ({ value, format, showSeconds, style = {} }) => {
+const TimeDisplay = ({
+  value,
+  format,
+  showSeconds = false,
+  font = 'shareTechMono400Regular',
+  style = {}
+}) => {
   const [text, setText] = React.useState('')
 
   const timeFormat = React.useMemo(() => {
@@ -25,7 +32,7 @@ const TimeDisplay = ({ value, format, showSeconds, style = {} }) => {
   }, [value, timeFormat])
 
   return (
-    <Text fontSize={75} style={style}>
+    <Text fontSize={75} style={{ ...style, fontFamily: font }}>
       {text}
     </Text>
   )
