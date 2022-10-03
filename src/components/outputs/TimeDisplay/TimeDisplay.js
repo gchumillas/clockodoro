@@ -9,7 +9,7 @@ import Text from '~/src/components/outputs/Text'
  * @param {boolean} params.showSeconds
  * @param {object} [params.style]
  */
-const TimeDisplay = ({ value, format, showSeconds, style = {} }) => {
+const TimeDisplay = ({ value, format, showSeconds = false, style = {} }) => {
   const [text, setText] = React.useState('')
 
   const timeFormat = React.useMemo(() => {
