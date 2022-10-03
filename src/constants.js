@@ -4,6 +4,7 @@
  */
 export const PALETTE = {
   black: '#000000',
+  white: '#ffffff',
   slate300: '#cbd5e1',
   red500: '#ef4444'
 }
@@ -29,6 +30,11 @@ export const FONT = {
  * Minium space between visual elements.
  */
 export const GAP = 8
+
+/**
+ * Border radius.
+ */
+export const BORDER_RADIUS = 10
 
 /**
  * Languages
