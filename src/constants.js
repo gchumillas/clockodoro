@@ -62,6 +62,7 @@ export const H24 = '24h'
  * Config
  */
 export const DEFAULT_CONFIG = {
+  timeFont: 'shareTechMono400Regular',
   timeFormat: H24,
   showSeconds: false,
   showDate: true,

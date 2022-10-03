@@ -1,5 +1,16 @@
 import { useSelector, useDispatch } from 'react-redux'
 
+export const useTimeFont = _ => {
+  const dispatch = useDispatch()
+  const timeFont = useSelector(state => state.timeFont)
+  const setTimeFont = (payload) => dispatch(
+    { type: 'SET_TIME_FONT', payload }
+  )
+
+  // TODO: (all) use object instead of array
+  return [timeFont, setTimeFont]
+}
+
 export const useTimeFormat = _ => {
   const dispatch = useDispatch()
   const timeFormat = useSelector(state => state.timeFormat)

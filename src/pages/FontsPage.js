@@ -1,12 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-native'
+import { useTimeFont } from '~/src/store/hooks'
 import { FONTS } from '~/src/constants'
 import FormLayout from '~/src/layouts/FormLayout'
 import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
 const FontsPage = () => {
   const navigate = useNavigate()
-  const [font, setFont] = React.useState('')
+  const [font, setFont] = useTimeFont()
 
   const doSave = () => {
     navigate('/')
