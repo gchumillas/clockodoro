@@ -40,6 +40,8 @@ const TimeButton = ({ value }) => {
 
 const styles = StyleSheet.create({
   root: {
+    alignItems: 'center',
+    height: 120,
     padding: GAP,
     marginBottom: GAP,
     borderWidth: 2,
