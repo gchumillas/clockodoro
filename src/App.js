@@ -33,7 +33,7 @@ const AppLoader = () => {
     rye400Regular
   })
   const [configLoading, setConfigLoading] = React.useState(false)
-  const [_timeFormat, setTimeFormat] = useTimeFormat()
+  const { setTimeFormat } = useTimeFormat()
   const [_showSeconds, setShowSeconds] = useShowSeconds()
   const [_showDate, setShowDate] = useShowDate()
   const [_showBattery, setShowBattery] = useShowBattery()

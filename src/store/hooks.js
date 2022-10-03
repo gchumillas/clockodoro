@@ -17,7 +17,7 @@ export const useTimeFormat = _ => {
     { type: 'SET_TIME_FORMAT', payload }
   )
 
-  return [timeFormat, setTimeFormat]
+  return { timeFormat, setTimeFormat }
 }
 
 export const useShowSeconds = _ => {
