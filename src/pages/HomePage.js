@@ -61,7 +61,6 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.box} />
       <View style={styles.box}>
         <Text fontSize={75}>
           {time}
@@ -72,14 +71,14 @@ const HomePage = () => {
         </Text>)}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
-      <View style={styles.box}>
-        {orientation == 'portrait' && (
-          <IconButton
-            icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
-            onPress={() => navigate('/settings')}
-          />
-        )}
-      </View>
+      {orientation == 'portrait' && (
+      // <View style={styles.box}>
+      <IconButton
+        icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
+        onPress={() => navigate('/settings')}
+      />
+      // </View>
+      )}
       <StatusBar hidden />
     </SafeAreaView>
   )
@@ -88,12 +87,12 @@ const HomePage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
     backgroundColor: PALETTE.black
   },
   box: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     paddingHorizontal: 4 * GAP
   },
   date: {
