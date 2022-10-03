@@ -12,6 +12,7 @@ import {
 import Loading from './components/Loading'
 import HomePage from './pages/HomePage'
 import SettingsPage from './pages/SettingsPage'
+import FontsPage from './pages/FontsPage'
 import './intl'
 import store from './store'
 
@@ -46,6 +47,7 @@ const AppLoader = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/fonts" element={<FontsPage />} />
       </Routes>
     </NativeRouter>
   )

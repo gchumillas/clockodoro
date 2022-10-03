@@ -9,7 +9,7 @@ import RadioField, { RadioButton }
   from '~/src/components/inputs/RadioField'
 import CheckboxField from '~/src/components/inputs/CheckboxField'
 import FormLayout from '~/src/layouts/FormLayout'
-import { saveConfig } from '../providers/cache'
+import { saveConfig } from '~/src/providers/cache'
 
 const SettingsPage = () => {
   const navigate = useNavigate()
