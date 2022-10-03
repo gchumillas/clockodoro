@@ -28,7 +28,7 @@ const HomePage = () => {
   const level = useBatteryLevel()
   const [showModalMenu, setShowModalMenu] = React.useState(false)
   const [time, setTime] = React.useState(dayjs())
-  const [timeFont] = useTimeFont()
+  const { timeFont } = useTimeFont()
   const [timeFormat] = useTimeFormat()
   const [showSeconds] = useShowSeconds()
   const [showDate] = useShowDate()

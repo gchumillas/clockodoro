@@ -7,8 +7,7 @@ export const useTimeFont = _ => {
     { type: 'SET_TIME_FONT', payload }
   )
 
-  // TODO: (all) use object instead of array
-  return [timeFont, setTimeFont]
+  return { timeFont, setTimeFont }
 }
 
 export const useTimeFormat = _ => {

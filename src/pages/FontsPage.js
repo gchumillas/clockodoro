@@ -7,7 +7,7 @@ import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
 const FontsPage = () => {
   const navigate = useNavigate()
-  const [font, setFont] = useTimeFont()
+  const { timeFont, setTimeFont } = useTimeFont()
 
   const doSave = () => {
     navigate('/')
@@ -15,7 +15,7 @@ const FontsPage = () => {
 
   return (
     <FormLayout onSave={doSave}>
-      <TimeSelector value={font} onChange={setFont}>
+      <TimeSelector value={timeFont} onChange={setTimeFont}>
         {FONTS.map((font) => <TimeButton key={font} value={font} />)}
       </TimeSelector>
     </FormLayout>
