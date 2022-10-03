@@ -18,7 +18,7 @@ import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
 import TimeDisplay from '~/src/components/outputs/TimeDisplay'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
-import DateViewer from '../components/outputs/DateViewer/DateViewer'
+import DateDisplay from '../components/outputs/DateDisplay'
 
 const HomePage = () => {
   useKeepAwake()
@@ -58,7 +58,7 @@ const HomePage = () => {
           showSeconds={showSeconds}
           style={styles.time}
         />
-        {showDate && <DateViewer value={time} style={styles.date} />}
+        {showDate && <DateDisplay value={time} style={styles.date} />}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       {orientation == 'portrait' && (

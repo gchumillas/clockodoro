@@ -6,7 +6,7 @@ import Text from '~/src/components/outputs/Text'
  * @param {dayjs.Dayjs} params.value
  * @param {object} [params.style]
  */
-const DateViewer = ({ value, style = {} }) => {
+const DateDisplay = ({ value, style = {} }) => {
   const [text, setText] = React.useState('')
 
   React.useEffect(() => {
@@ -20,4 +20,4 @@ const DateViewer = ({ value, style = {} }) => {
   )
 }
 
-export default DateViewer
+export default DateDisplay
