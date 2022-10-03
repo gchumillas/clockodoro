@@ -72,12 +72,10 @@ const HomePage = () => {
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       {orientation == 'portrait' && (
-      // <View style={styles.box}>
-      <IconButton
-        icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
-        onPress={() => navigate('/settings')}
-      />
-      // </View>
+        <IconButton
+          icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
+          onPress={() => navigate('/settings')}
+        />
       )}
       <StatusBar hidden />
     </SafeAreaView>
