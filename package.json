@@ -10,6 +10,9 @@
     "lint": "eslint ./src"
   },
   "dependencies": {
+    "@expo-google-fonts/audiowide": "^0.2.2",
+    "@expo-google-fonts/fredericka-the-great": "^0.2.2",
+    "@expo-google-fonts/rye": "^0.2.2",
     "@expo-google-fonts/share-tech-mono": "^0.2.2",
     "dayjs": "^1.11.5",
     "expo": "~46.0.9",
