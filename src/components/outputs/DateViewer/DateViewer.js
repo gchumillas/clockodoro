@@ -3,15 +3,15 @@ import Text from '~/src/components/outputs/Text'
 
 /**
  * @param {object} params
- * @param {dayjs.Dayjs} params.date
+ * @param {dayjs.Dayjs} params.value
  * @param {object} [params.style]
  */
-const DateViewer = ({ date, style = {} }) => {
+const DateViewer = ({ value, style = {} }) => {
   const [text, setText] = React.useState('')
 
   React.useEffect(() => {
-    setText(date.format('ll'))
-  }, [date])
+    setText(value.format('ll'))
+  }, [value])
 
   return (
     <Text style={style}>

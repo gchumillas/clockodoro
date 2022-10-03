@@ -53,12 +53,12 @@ const HomePage = () => {
     <SafeAreaView style={styles.root}>
       <View style={styles.box}>
         <TimeDisplay
-          time={time}
+          value={time}
           format={timeFormat}
           showSeconds={showSeconds}
           style={styles.time}
         />
-        {showDate && <DateViewer date={time} style={styles.date} />}
+        {showDate && <DateViewer value={time} style={styles.date} />}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       {orientation == 'portrait' && (
