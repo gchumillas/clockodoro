@@ -1,18 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-native'
-import dayjs from '~/src/libs/dayjs'
 import { FONTS } from '~/src/constants'
 import FormLayout from '~/src/layouts/FormLayout'
-import TimeDisplay from '~/src/components/outputs/TimeDisplay'
-import {
-  useTimeFormat, useShowSeconds
-} from '~/src/store/hooks'
+import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
 const FontsPage = () => {
   const navigate = useNavigate()
-  const [timeFormat] = useTimeFormat()
-  const [showSeconds] = useShowSeconds()
-  const now = React.useMemo(() => dayjs(), [])
+  const [font, setFont] = React.useState('')
 
   const doSave = () => {
     navigate('/')
@@ -20,15 +14,9 @@ const FontsPage = () => {
 
   return (
     <FormLayout onSave={doSave}>
-      {FONTS.map((font) => (
-        <TimeDisplay
-          key={font}
-          value={now}
-          format={timeFormat}
-          showSeconds={showSeconds}
-          font={font}
-        />
-      ))}
+      <TimeSelector value={font} onChange={setFont}>
+        {FONTS.map((font) => <TimeButton key={font} value={font} />)}
+      </TimeSelector>
     </FormLayout>
   )
 }
