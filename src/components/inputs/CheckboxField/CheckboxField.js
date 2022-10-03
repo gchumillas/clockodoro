@@ -3,7 +3,7 @@ import { StyleSheet, Pressable } from 'react-native'
 import { COLORS, GAP } from '~/src/constants'
 import CheckOffIcon from '~/assets/icons/check-off-icon.svg'
 import CheckOnIcon from '~/assets/icons/check-on-icon.svg'
-import Text from '~/src/components/Text'
+import Text from '~/src/components/display/Text'
 
 /**
  * @param {object} params

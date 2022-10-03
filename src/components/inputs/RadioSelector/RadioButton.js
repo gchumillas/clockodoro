@@ -3,7 +3,7 @@ import { StyleSheet, Pressable } from 'react-native'
 import { COLORS, GAP } from '~/src/constants'
 import RadioOffIcon from '~/assets/icons/radio-off-icon.svg'
 import RadioOnIcon from '~/assets/icons/radio-on-icon.svg'
-import Text from '~/src/components/Text'
+import Text from '~/src/components/display/Text'
 import { context } from './context'
 
 /**

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pressable, StyleSheet } from 'react-native'
 import { GAP, PALETTE } from '~/src/constants'
-import Text from '~/src/components/Text'
+import Text from '~/src/components/display/Text'
 
 /**
  * @param {object} params
