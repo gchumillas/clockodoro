@@ -6,7 +6,7 @@ const IconButton = ({ icon, onPress }) => {
   return (
     <Pressable
       style={({ pressed }) => ({
-        ...styles.button,
+        ...styles.root,
         opacity: pressed ? 0.7 : 1
       })}
       onPress={onPress}
