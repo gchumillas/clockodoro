@@ -7,7 +7,7 @@ import { context } from './context'
  * @param {(value: string) => void} params.onChange
  * @param {React.ReactNode} params.children
  */
-const RadioSelector = ({ value, onChange, children }) => {
+const RadioField = ({ value, onChange, children }) => {
   const contextValue = React.useMemo(
     () => ({ value, onChange }),
     [value, onChange]
@@ -20,4 +20,4 @@ const RadioSelector = ({ value, onChange, children }) => {
   )
 }
 
-export default RadioSelector
+export default RadioField

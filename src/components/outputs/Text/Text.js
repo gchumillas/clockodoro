@@ -1,16 +1,16 @@
 import React from 'react'
 import { Text as RNText, StyleSheet } from 'react-native'
-import { FONT } from '~/src/constants'
+import { FONT_SIZE, FONT_COLOR } from '~/src/constants'
 import { normalize } from '~/src/libs/normalize'
 
 /**
  * @param {object} params
  * @param {React.ReactNode} params.children
  * @param {number} [params.fontSize]
- * @param {{ [key: string]: any }} [params.style]
+ * @param {object} [params.style]
  * @returns
  */
-const Text = ({ fontSize = FONT.size, style = {}, children }) => {
+const Text = ({ fontSize = FONT_SIZE, style = {}, children }) => {
   return (
     <RNText
       numberOfLines={1}
@@ -24,8 +24,7 @@ const Text = ({ fontSize = FONT.size, style = {}, children }) => {
 
 const styles = StyleSheet.create({
   root: {
-    fontFamily: FONT.family,
-    color: FONT.color
+    color: FONT_COLOR
   }
 })
 

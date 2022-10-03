@@ -29,8 +29,7 @@ module.exports = {
       'warn',
       {
         'code': 80,
-        'ignoreComments': true,
-        'ignorePattern': '^import'
+        'ignoreComments': true
       }
     ],
     'eqeqeq': 'off',

@@ -2,7 +2,17 @@ import { createStore } from 'redux'
 import { DEFAULT_CONFIG } from '~/src/constants'
 
 const reducer = (state = DEFAULT_CONFIG, action) => {
-  if (action.type == 'SET_TIME_FORMAT') {
+  if (action.type == 'SET_TIME_COLOR') {
+    return {
+      ...state,
+      timeColor: action.payload
+    }
+  } else if (action.type == 'SET_TIME_FONT') {
+    return {
+      ...state,
+      timeFont: action.payload
+    }
+  } else if (action.type == 'SET_TIME_FORMAT') {
     return {
       ...state,
       timeFormat: action.payload
