@@ -15,7 +15,7 @@ import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import Text from '~/src/components/Text'
-import IconButton from '~/src/components/IconButton'
+import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
