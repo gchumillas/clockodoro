@@ -7,7 +7,7 @@ import { normalize } from '~/src/libs/normalize'
  * @param {object} params
  * @param {React.ReactNode} params.children
  * @param {number} [params.fontSize]
- * @param {{ [key: string]: any }} [params.style]
+ * @param {object} [params.style]
  * @returns
  */
 const Text = ({ fontSize = FONT.size, style = {}, children }) => {
