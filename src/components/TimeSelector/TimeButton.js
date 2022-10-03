@@ -2,9 +2,6 @@ import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import dayjs from '~/src/libs/dayjs'
 import { BORDER_RADIUS, GAP } from '~/src/constants'
-import {
-  useTimeFormat, useShowSeconds
-} from '~/src/store/hooks'
 import TimeDisplay from '~/src/components/outputs/TimeDisplay'
 import { context } from './context'
 
@@ -12,10 +9,8 @@ import { context } from './context'
  * @param {object} params
  * @param {string} params.value
  */
-const TimeButton = ({ value }) => {
+const TimeButton = ({ value, color, font, format, showSeconds }) => {
   const { value: contextValue, onChange } = React.useContext(context)
-  const { timeFormat } = useTimeFormat()
-  const { showSeconds } = useShowSeconds()
   const now = React.useMemo(() => dayjs(), [])
 
   return (
@@ -30,9 +25,10 @@ const TimeButton = ({ value }) => {
     >
       <TimeDisplay
         value={now}
-        format={timeFormat}
+        color={color}
+        font={font}
+        format={format}
         showSeconds={showSeconds}
-        font={value}
       />
     </Pressable>
   )

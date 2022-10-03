@@ -20,6 +20,16 @@ export const useTimeFormat = _ => {
   return { timeFormat, setTimeFormat }
 }
 
+export const useTimeColor = _ => {
+  const dispatch = useDispatch()
+  const timeColor = useSelector(state => state.timeColor)
+  const setTimeColor = (payload) => dispatch(
+    { type: 'SET_TIME_COLOR', payload }
+  )
+
+  return { timeColor, setTimeColor }
+}
+
 export const useShowSeconds = _ => {
   const dispatch = useDispatch()
   const showSeconds = useSelector(state => state.showSeconds)

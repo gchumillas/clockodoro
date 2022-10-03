@@ -1,19 +1,16 @@
 import React from 'react'
 import { useNavigate } from 'react-router-native'
+import { APP_COLORS } from '~/src/constants'
 import {
-  useTimeColor,
-  useTimeFont,
-  useTimeFormat,
-  useShowSeconds
+  useTimeColor, useTimeFont, useTimeFormat, useShowSeconds
 } from '~/src/store/hooks'
-import { FONTS } from '~/src/constants'
 import FormLayout from '~/src/layouts/FormLayout'
 import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
-const FontsPage = () => {
+const ColorsPage = () => {
   const navigate = useNavigate()
-  const { timeFont, setTimeFont } = useTimeFont()
-  const { timeColor } = useTimeColor()
+  const { timeColor, setTimeColor } = useTimeColor()
+  const { timeFont } = useTimeFont()
   const { timeFormat } = useTimeFormat()
   const { showSeconds } = useShowSeconds()
 
@@ -23,13 +20,13 @@ const FontsPage = () => {
 
   return (
     <FormLayout onSave={doSave}>
-      <TimeSelector value={timeFont} onChange={setTimeFont}>
-        {FONTS.map((font) => (
+      <TimeSelector value={timeColor} onChange={setTimeColor}>
+        {APP_COLORS.map((color) => (
           <TimeButton
-            key={font}
-            value={font}
-            color={timeColor}
-            font={font}
+            key={color}
+            value={color}
+            color={color}
+            font={timeFont}
             format={timeFormat}
             showSeconds={showSeconds}
           />
@@ -39,4 +36,4 @@ const FontsPage = () => {
   )
 }
 
-export default FontsPage
+export default ColorsPage

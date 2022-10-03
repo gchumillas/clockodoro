@@ -5,6 +5,7 @@ import Text from '~/src/components/outputs/Text'
 /**
  * @param {object} params
  * @param {dayjs.Dayjs} params.value
+ * @param {string} params.color
  * @param {'am_pm' | '24h'} params.format
  * @param {boolean} params.showSeconds
  * @param {string} [params.font]
@@ -12,6 +13,7 @@ import Text from '~/src/components/outputs/Text'
  */
 const TimeDisplay = ({
   value,
+  color,
   format,
   showSeconds = false,
   font = 'shareTechMono400Regular',
@@ -32,7 +34,7 @@ const TimeDisplay = ({
   }, [value, timeFormat])
 
   return (
-    <Text fontSize={75} style={{ ...style, fontFamily: font }}>
+    <Text fontSize={75} style={{ ...style, color, fontFamily: font }}>
       {text}
     </Text>
   )
