@@ -8,7 +8,10 @@ export const PALETTE = {
   black: '#000000',
   white: '#ffffff',
   slate300: '#cbd5e1',
-  red500: '#ef4444'
+  red300: '#fca5a5',
+  red500: '#ef4444',
+  green300: '#86efac',
+  sky300: '#7dd3fc'
 }
 
 // Semantic colors
@@ -22,11 +25,19 @@ export const COLORS = {
  */
 
 // Available fonts
+// TODO: rename to APP_FONTS
 export const FONTS = [
   'shareTechMono400Regular',
   'audiowide400Regular',
   'frederickaTheGreat400Regular',
   'rye400Regular'
+]
+
+export const APP_COLORS = [
+  PALETTE.slate300,
+  PALETTE.red300,
+  PALETTE.green300,
+  PALETTE.sky300
 ]
 
 // System font
@@ -57,6 +68,7 @@ export const H24 = '24h'
 export const DEFAULT_CONFIG = {
   timeFont: 'shareTechMono400Regular',
   timeFormat: H24,
+  timeColor: PALETTE.slate300,
   showSeconds: false,
   showDate: true,
   showBattery: true
