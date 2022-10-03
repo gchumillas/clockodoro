@@ -11,7 +11,10 @@ import Text from '~/src/components/Text'
  */
 const MenuItem = ({ label, onPress }) => {
   return (
-    <Pressable onPress={onPress}>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => ({ opacity: pressed ? 0.3 : 1 })}
+    >
       <Text style={styles.text}>
         {label}
       </Text>
