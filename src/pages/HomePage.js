@@ -56,6 +56,7 @@ const HomePage = () => {
           time={time}
           format={timeFormat}
           showSeconds={showSeconds}
+          style={styles.time}
         />
         {showDate && <DateViewer date={time} style={styles.date} />}
         {showBattery && <BatteryIcon value={100 * level} />}
@@ -86,6 +87,9 @@ const styles = StyleSheet.create({
   box: {
     alignItems: 'center',
     paddingHorizontal: 4 * GAP
+  },
+  time: {
+    marginBottom: GAP
   },
   date: {
     marginBottom: 1.5 * GAP
