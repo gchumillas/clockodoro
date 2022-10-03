@@ -7,8 +7,8 @@ import { PALETTE, GAP, AM_PM, H24 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
-import RadioSelector, { RadioButton } from '~/src/components/RadioSelector'
-import CheckboxField from '~/src/components/CheckboxField'
+import RadioSelector, { RadioButton } from '~/src/components/inputs/RadioSelector'
+import CheckboxField from '~/src/components/inputs/CheckboxField'
 import Button from '~/src/components/buttons/Button'
 import { saveConfig } from '../providers/cache'
 
