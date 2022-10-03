@@ -17,6 +17,7 @@ import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import Text from '~/src/components/outputs/Text'
 import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
+import TimeDisplay from '~/src/components/outputs/TimeDisplay'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
 const HomePage = () => {
@@ -26,20 +27,12 @@ const HomePage = () => {
   const orientation = useOrientation()
   const level = useBatteryLevel()
   const [showModalMenu, setShowModalMenu] = React.useState(false)
-  const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
+  const [time, setTime] = React.useState(dayjs())
   const [timeFormat] = useTimeFormat()
   const [showSeconds] = useShowSeconds()
   const [showDate] = useShowDate()
   const [showBattery] = useShowBattery()
-
-  const dateFormat = React.useMemo(() => {
-    if (timeFormat == AM_PM) {
-      return showSeconds ? 'h:mm:ss a' : 'h:mm a'
-    }
-
-    return showSeconds ? 'HH:mm:ss' : 'HH:mm'
-  }, [timeFormat, showSeconds])
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
@@ -53,20 +46,22 @@ const HomePage = () => {
   React.useEffect(() => {
     const updateTime = () => {
       const now = dayjs()
-      setTime(now.format(dateFormat))
+      setTime(now)
       setDate(now.format('ll'))
     }
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
-  }, [dateFormat])
+  }, [])
 
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.box}>
-        <Text fontSize={75}>
-          {time}
-        </Text>
+        <TimeDisplay
+          time={time}
+          format={timeFormat}
+          showSeconds={showSeconds}
+        />
         {showDate && (
         <Text style={styles.date}>
           {date}
