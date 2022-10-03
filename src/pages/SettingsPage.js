@@ -30,7 +30,6 @@ const SettingsPage = () => {
     navigate('/')
   }
 
-  // TODO: the view should be scrollable
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.wrapper}>
