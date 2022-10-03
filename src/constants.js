@@ -18,6 +18,16 @@ export const COLORS = {
 }
 
 /**
+ * Available fonts
+ */
+export const FONTS = [
+  'shareTechMono400Regular',
+  'audiowide400Regular',
+  'frederickaTheGreat400Regular',
+  'rye400Regular'
+]
+
+/**
  * Font properties
  */
 export const FONT = {

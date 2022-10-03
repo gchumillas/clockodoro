@@ -5,6 +5,15 @@ import { useFonts } from 'expo-font'
 import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
+import {
+  Audiowide_400Regular as audiowide400Regular
+} from '@expo-google-fonts/audiowide'
+import {
+  FrederickatheGreat_400Regular as frederickaTheGreat400Regular
+} from '@expo-google-fonts/fredericka-the-great'
+import {
+  Rye_400Regular as rye400Regular
+} from '@expo-google-fonts/rye'
 import { getConfig } from './providers/cache'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -17,7 +26,12 @@ import './intl'
 import store from './store'
 
 const AppLoader = () => {
-  const [fontsLoaded] = useFonts({ shareTechMono400Regular })
+  const [fontsLoaded] = useFonts({
+    shareTechMono400Regular,
+    audiowide400Regular,
+    frederickaTheGreat400Regular,
+    rye400Regular
+  })
   const [configLoading, setConfigLoading] = React.useState(false)
   const [_timeFormat, setTimeFormat] = useTimeFormat()
   const [_showSeconds, setShowSeconds] = useShowSeconds()
