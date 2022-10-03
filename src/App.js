@@ -36,7 +36,7 @@ const AppLoader = () => {
   const { setTimeFormat } = useTimeFormat()
   const { setShowSeconds } = useShowSeconds()
   const { setShowDate } = useShowDate()
-  const [_showBattery, setShowBattery] = useShowBattery()
+  const { setShowBattery } = useShowBattery()
 
   React.useEffect(() => {
     setConfigLoading(true)

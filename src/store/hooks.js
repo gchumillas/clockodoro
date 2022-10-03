@@ -47,5 +47,5 @@ export const useShowBattery = _ => {
     { type: 'SET_SHOW_BATTERY', payload }
   )
 
-  return [showBattery, setShowBattery]
+  return { showBattery, setShowBattery }
 }

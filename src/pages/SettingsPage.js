@@ -17,7 +17,7 @@ const SettingsPage = () => {
   const { timeFormat, setTimeFormat } = useTimeFormat()
   const { showSeconds, setShowSeconds } = useShowSeconds()
   const { showDate, setShowDate } = useShowDate()
-  const [showBattery, setShowBattery] = useShowBattery()
+  const { showBattery, setShowBattery } = useShowBattery()
 
   const doSave = () => {
     saveConfig({

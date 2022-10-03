@@ -32,7 +32,7 @@ const HomePage = () => {
   const { timeFormat } = useTimeFormat()
   const { showSeconds } = useShowSeconds()
   const { showDate } = useShowDate()
-  const [showBattery] = useShowBattery()
+  const { showBattery } = useShowBattery()
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
