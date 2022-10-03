@@ -7,8 +7,8 @@ import { PALETTE, GAP, AM_PM, H24 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
-import RadioSelector, { RadioButton }
-  from '~/src/components/inputs/RadioSelector'
+import RadioField, { RadioButton }
+  from '~/src/components/inputs/RadioField'
 import CheckboxField from '~/src/components/inputs/CheckboxField'
 import Button from '~/src/components/buttons/Button'
 import { saveConfig } from '../providers/cache'
@@ -35,10 +35,10 @@ const SettingsPage = () => {
     <SafeAreaView style={styles.root}>
       <View style={styles.wrapper}>
         <ScrollView style={styles.body}>
-          <RadioSelector value={timeFormat} onChange={setTimeFormat}>
+          <RadioField value={timeFormat} onChange={setTimeFormat}>
             <RadioButton value={H24} label={t`use 24h format`} />
             <RadioButton value={AM_PM} label={t`use am|pm format`} />
-          </RadioSelector>
+          </RadioField>
           <CheckboxField
             label={t`show seconds`}
             value={showSeconds}
