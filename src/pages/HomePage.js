@@ -31,7 +31,7 @@ const HomePage = () => {
   const { timeFont } = useTimeFont()
   const { timeFormat } = useTimeFormat()
   const { showSeconds } = useShowSeconds()
-  const [showDate] = useShowDate()
+  const { showDate } = useShowDate()
   const [showBattery] = useShowBattery()
 
   React.useEffect(() => {

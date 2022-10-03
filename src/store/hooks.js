@@ -37,7 +37,7 @@ export const useShowDate = _ => {
     { type: 'SET_SHOW_DATE', payload }
   )
 
-  return [showDate, setShowDate]
+  return { showDate, setShowDate }
 }
 
 export const useShowBattery = _ => {
