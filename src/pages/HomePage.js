@@ -73,7 +73,6 @@ const HomePage = () => {
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       <View style={styles.box}>
-        {/* TODO: make an IconButton */}
         {orientation == 'portrait' && (
           <IconButton
             icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
