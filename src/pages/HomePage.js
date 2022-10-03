@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, AM_PM, GAP, COLORS
+  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP, COLORS
 } from '~/src/constants'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -14,10 +14,11 @@ import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
-import Text from '~/src/components/outputs/Text'
 import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
+import TimeDisplay from '~/src/components/outputs/TimeDisplay'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
+import DateDisplay from '../components/outputs/DateDisplay'
 
 const HomePage = () => {
   useKeepAwake()
@@ -26,20 +27,11 @@ const HomePage = () => {
   const orientation = useOrientation()
   const level = useBatteryLevel()
   const [showModalMenu, setShowModalMenu] = React.useState(false)
-  const [time, setTime] = React.useState('')
-  const [date, setDate] = React.useState('')
+  const [time, setTime] = React.useState(dayjs())
   const [timeFormat] = useTimeFormat()
   const [showSeconds] = useShowSeconds()
   const [showDate] = useShowDate()
   const [showBattery] = useShowBattery()
-
-  const dateFormat = React.useMemo(() => {
-    if (timeFormat == AM_PM) {
-      return showSeconds ? 'h:mm:ss a' : 'h:mm a'
-    }
-
-    return showSeconds ? 'HH:mm:ss' : 'HH:mm'
-  }, [timeFormat, showSeconds])
 
   React.useEffect(() => {
     const lang = i18n.resolvedLanguage
@@ -51,26 +43,22 @@ const HomePage = () => {
   }, [i18n.resolvedLanguage])
 
   React.useEffect(() => {
-    const updateTime = () => {
-      const now = dayjs()
-      setTime(now.format(dateFormat))
-      setDate(now.format('ll'))
-    }
+    const updateTime = () => setTime(dayjs())
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
-  }, [dateFormat])
+  }, [])
 
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.box}>
-        <Text fontSize={75}>
-          {time}
-        </Text>
-        {showDate && (
-        <Text style={styles.date}>
-          {date}
-        </Text>)}
+        <TimeDisplay
+          value={time}
+          format={timeFormat}
+          showSeconds={showSeconds}
+          style={styles.time}
+        />
+        {showDate && <DateDisplay value={time} style={styles.date} />}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       {orientation == 'portrait' && (
@@ -99,6 +87,9 @@ const styles = StyleSheet.create({
   box: {
     alignItems: 'center',
     paddingHorizontal: 4 * GAP
+  },
+  time: {
+    marginBottom: GAP
   },
   date: {
     marginBottom: 1.5 * GAP
