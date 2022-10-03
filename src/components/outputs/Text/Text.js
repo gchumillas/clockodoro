@@ -24,7 +24,6 @@ const Text = ({ fontSize = FONT.size, style = {}, children }) => {
 
 const styles = StyleSheet.create({
   root: {
-    fontFamily: FONT.family,
     color: FONT.color
   }
 })

@@ -31,7 +31,6 @@ export const FONTS = [
 
 // System font
 export const FONT = {
-  family: 'shareTechMono400Regular',
   size: 18,
   color: PALETTE.slate300
 }
