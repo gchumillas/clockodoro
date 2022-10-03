@@ -88,13 +88,13 @@ const HomePage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: PALETTE.black,
-    padding: 4 * GAP
+    backgroundColor: PALETTE.black
   },
   box: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingHorizontal: 4 * GAP
   },
   date: {
     marginBottom: 1.5 * GAP
