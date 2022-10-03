@@ -15,7 +15,7 @@ const SettingsPage = () => {
   const navigate = useNavigate()
   const { t } = useTranslation('settings')
   const { timeFormat, setTimeFormat } = useTimeFormat()
-  const [showSeconds, setShowSeconds] = useShowSeconds()
+  const { showSeconds, setShowSeconds } = useShowSeconds()
   const [showDate, setShowDate] = useShowDate()
   const [showBattery, setShowBattery] = useShowBattery()
 

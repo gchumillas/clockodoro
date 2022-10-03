@@ -30,7 +30,7 @@ const HomePage = () => {
   const [time, setTime] = React.useState(dayjs())
   const { timeFont } = useTimeFont()
   const { timeFormat } = useTimeFormat()
-  const [showSeconds] = useShowSeconds()
+  const { showSeconds } = useShowSeconds()
   const [showDate] = useShowDate()
   const [showBattery] = useShowBattery()
 

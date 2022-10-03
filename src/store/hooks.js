@@ -27,7 +27,7 @@ export const useShowSeconds = _ => {
     { type: 'SET_SHOW_SECONDS', payload }
   )
 
-  return [showSeconds, setShowSeconds]
+  return { showSeconds, setShowSeconds }
 }
 
 export const useShowDate = _ => {

@@ -15,7 +15,7 @@ import { context } from './context'
 const TimeButton = ({ value }) => {
   const { value: contextValue, onChange } = React.useContext(context)
   const { timeFormat } = useTimeFormat()
-  const [showSeconds] = useShowSeconds()
+  const { showSeconds } = useShowSeconds()
   const now = React.useMemo(() => dayjs(), [])
 
   return (
