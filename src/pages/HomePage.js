@@ -13,6 +13,7 @@ import {
 import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
+import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import Text from '~/src/components/Text'
 import IconButton from '~/src/components/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
@@ -24,6 +25,7 @@ const HomePage = () => {
   const navigate = useNavigate()
   const orientation = useOrientation()
   const level = useBatteryLevel()
+  const [showModalMenu, setShowModalMenu] = React.useState(false)
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
   const [timeFormat] = useTimeFormat()
@@ -74,9 +76,14 @@ const HomePage = () => {
       {orientation == 'portrait' && (
         <IconButton
           icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
-          onPress={() => navigate('/settings')}
+          onPress={() => setShowModalMenu(true)}
         />
       )}
+      <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
+        <MenuItem label="Settings" onPress={() => navigate('/settings')} />
+        <MenuItem label="Fonts" onPress={() => navigate('/fonts')} />
+        <MenuItem label="Colors" onPress={() => navigate('/colors')} />
+      </ModalMenu>
       <StatusBar hidden />
     </SafeAreaView>
   )
