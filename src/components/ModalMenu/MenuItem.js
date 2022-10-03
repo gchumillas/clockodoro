@@ -7,7 +7,6 @@ import Text from '~/src/components/outputs/Text'
  * @param {object} params
  * @param {string} params.label
  * @param {() => void} params.onPress
- * @returns
  */
 const MenuItem = ({ label, onPress }) => {
   return (
