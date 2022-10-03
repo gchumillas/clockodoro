@@ -8,7 +8,12 @@ import {
   PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP, COLORS
 } from '~/src/constants'
 import {
-  useTimeFormat, useShowSeconds, useShowDate, useShowBattery, useTimeFont
+  useTimeColor,
+  useTimeFormat,
+  useShowSeconds,
+  useShowDate,
+  useShowBattery,
+  useTimeFont
 } from '~/src/store/hooks'
 import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
@@ -28,6 +33,7 @@ const HomePage = () => {
   const level = useBatteryLevel()
   const [showModalMenu, setShowModalMenu] = React.useState(false)
   const [time, setTime] = React.useState(dayjs())
+  const { timeColor } = useTimeColor()
   const { timeFont } = useTimeFont()
   const { timeFormat } = useTimeFormat()
   const { showSeconds } = useShowSeconds()
@@ -55,12 +61,15 @@ const HomePage = () => {
       <View style={styles.box}>
         <TimeDisplay
           value={time}
+          color={timeColor}
           format={timeFormat}
           showSeconds={showSeconds}
           font={timeFont}
           style={styles.time}
         />
-        {showDate && <DateDisplay value={time} style={styles.date} />}
+        {showDate && (
+          <DateDisplay value={time} color={timeColor} style={styles.date} />
+        )}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       {orientation == 'portrait' && (
