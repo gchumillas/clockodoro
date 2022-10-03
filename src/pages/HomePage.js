@@ -14,11 +14,11 @@ import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
-import Text from '~/src/components/outputs/Text'
 import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
 import TimeDisplay from '~/src/components/outputs/TimeDisplay'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
+import DateViewer from '../components/outputs/DateViewer/DateViewer'
 
 const HomePage = () => {
   useKeepAwake()
@@ -27,7 +27,6 @@ const HomePage = () => {
   const orientation = useOrientation()
   const level = useBatteryLevel()
   const [showModalMenu, setShowModalMenu] = React.useState(false)
-  const [date, setDate] = React.useState('')
   const [time, setTime] = React.useState(dayjs())
   const [timeFormat] = useTimeFormat()
   const [showSeconds] = useShowSeconds()
@@ -44,11 +43,7 @@ const HomePage = () => {
   }, [i18n.resolvedLanguage])
 
   React.useEffect(() => {
-    const updateTime = () => {
-      const now = dayjs()
-      setTime(now)
-      setDate(now.format('ll'))
-    }
+    const updateTime = () => setTime(dayjs())
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
@@ -62,10 +57,7 @@ const HomePage = () => {
           format={timeFormat}
           showSeconds={showSeconds}
         />
-        {showDate && (
-        <Text style={styles.date}>
-          {date}
-        </Text>)}
+        {showDate && <DateViewer date={time} style={styles.date} />}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
       {orientation == 'portrait' && (
