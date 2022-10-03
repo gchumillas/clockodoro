@@ -13,8 +13,9 @@ import {
 import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
-import Text from '~/src/components/Text'
-import IconButton from '~/src/components/IconButton'
+import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
+import Text from '~/src/components/outputs/Text'
+import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
@@ -24,6 +25,7 @@ const HomePage = () => {
   const navigate = useNavigate()
   const orientation = useOrientation()
   const level = useBatteryLevel()
+  const [showModalMenu, setShowModalMenu] = React.useState(false)
   const [time, setTime] = React.useState('')
   const [date, setDate] = React.useState('')
   const [timeFormat] = useTimeFormat()
@@ -61,7 +63,6 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.box} />
       <View style={styles.box}>
         <Text fontSize={75}>
           {time}
@@ -72,15 +73,17 @@ const HomePage = () => {
         </Text>)}
         {showBattery && <BatteryIcon value={100 * level} />}
       </View>
-      <View style={styles.box}>
-        {/* TODO: make an IconButton */}
-        {orientation == 'portrait' && (
-          <IconButton
-            icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
-            onPress={() => navigate('/settings')}
-          />
-        )}
-      </View>
+      {orientation == 'portrait' && (
+        <IconButton
+          icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
+          onPress={() => setShowModalMenu(true)}
+        />
+      )}
+      <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
+        <MenuItem label="Settings" onPress={() => navigate('/settings')} />
+        <MenuItem label="Fonts" onPress={() => navigate('/fonts')} />
+        <MenuItem label="Colors" onPress={() => navigate('/colors')} />
+      </ModalMenu>
       <StatusBar hidden />
     </SafeAreaView>
   )
@@ -89,13 +92,13 @@ const HomePage = () => {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: PALETTE.black,
-    padding: 4 * GAP
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    backgroundColor: PALETTE.black
   },
   box: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    paddingHorizontal: 4 * GAP
   },
   date: {
     marginBottom: 1.5 * GAP

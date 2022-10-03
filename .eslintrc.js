@@ -25,7 +25,14 @@ module.exports = {
   ],
   'ignorePatterns': ['*.config.js'],
   'rules': {
-    'max-len': ['warn', { 'code': 80, 'ignoreComments': true }],
+    'max-len': [
+      'warn',
+      {
+        'code': 80,
+        'ignoreComments': true,
+        'ignorePattern': '^import'
+      }
+    ],
     'eqeqeq': 'off',
     'semi': ['error', 'never'],
     'quotes': ['error', 'single'],
