@@ -6,9 +6,10 @@ import Text from '~/src/components/outputs/Text'
  * @param {object} params
  * @param {dayjs.Dayjs} params.time
  * @param {'am_pm' | '24h'} params.format
- * @param {boolean} showSeconds
+ * @param {boolean} params.showSeconds
+ * @param {object} [params.style]
  */
-const TimeDisplay = ({ time, format, showSeconds }) => {
+const TimeDisplay = ({ time, format, showSeconds, style = {} }) => {
   const [text, setText] = React.useState('')
 
   const timeFormat = React.useMemo(() => {
@@ -24,7 +25,7 @@ const TimeDisplay = ({ time, format, showSeconds }) => {
   }, [time, timeFormat])
 
   return (
-    <Text fontSize={75}>
+    <Text fontSize={75} style={style}>
       {text}
     </Text>
   )
