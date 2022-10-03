@@ -68,7 +68,8 @@ const HomePage = () => {
         />
       )}
       <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
-        <MenuItem label="Settings" onPress={() => navigate('/settings')} />
+        {/* TODO: use translations */}
+        <MenuItem label="Preferences" onPress={() => navigate('/settings')} />
         <MenuItem label="Fonts" onPress={() => navigate('/fonts')} />
         <MenuItem label="Colors" onPress={() => navigate('/colors')} />
       </ModalMenu>
