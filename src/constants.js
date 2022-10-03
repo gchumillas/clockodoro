@@ -30,10 +30,8 @@ export const FONTS = [
 ]
 
 // System font
-export const FONT = {
-  size: 18,
-  color: PALETTE.slate300
-}
+export const FONT_SIZE = 18
+export const FONT_COLOR = PALETTE.slate300
 
 /**
  * Metrics (spaces, borders, etc).
