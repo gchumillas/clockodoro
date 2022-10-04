@@ -24,7 +24,7 @@ import {
   useTimeColor,
   useTimeFont
 } from './store/hooks'
-import Loading from './components/Loading'
+import Loading from './components/app/Loading'
 import HomePage from './pages/HomePage'
 import SettingsPage from './pages/SettingsPage'
 import FontsPage from './pages/FontsPage'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { AM_PM } from '~/src/constants'
-import Text from '~/src/components/outputs/Text'
+import Text from '~/src/components/displays/Text'
 
 /**
  * @param {object} params

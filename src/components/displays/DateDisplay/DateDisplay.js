@@ -1,5 +1,5 @@
 import React from 'react'
-import Text from '~/src/components/outputs/Text'
+import Text from '~/src/components/displays/Text'
 
 /**
  * @param {object} params

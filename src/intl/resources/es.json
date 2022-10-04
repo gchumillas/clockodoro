@@ -2,6 +2,11 @@
   "common": {
     "save": "Guardar"
   },
+  "home": {
+    "preferences": "Preferencias",
+    "fonts": "Fuentes",
+    "colors": "Colores"
+  },
   "settings": {
     "use 24h format": "Usar formato de 24h",
     "use am|pm format": "Usar formato AM|PM",

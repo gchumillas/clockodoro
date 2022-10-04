@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pressable, StyleSheet } from 'react-native'
-import Text from '~/src/components/outputs/Text'
+import Text from '~/src/components/displays/Text'
 import { COLORS, GAP } from '~/src/constants'
 
 /**

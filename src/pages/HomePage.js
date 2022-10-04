@@ -18,16 +18,16 @@ import {
 import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
-import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import IconButton from '~/src/components/buttons/IconButton'
-import BatteryIcon from '~/src/components/BatteryIcon'
-import TimeDisplay from '~/src/components/outputs/TimeDisplay'
+import TimeDisplay from '~/src/components/displays/TimeDisplay'
+import DateDisplay from '../components/displays/DateDisplay'
+import ModalMenu, { MenuItem } from '~/src/components/app/ModalMenu'
+import BatteryIcon from '~/src/components/app/BatteryIcon'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
-import DateDisplay from '../components/outputs/DateDisplay'
 
 const HomePage = () => {
   useKeepAwake()
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation('home')
   const navigate = useNavigate()
   const orientation = useOrientation()
   const level = useBatteryLevel()
@@ -78,10 +78,18 @@ const HomePage = () => {
         />
       )}
       <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
-        {/* TODO: use translations */}
-        <MenuItem label="Preferences" onPress={() => navigate('/settings')} />
-        <MenuItem label="Fonts" onPress={() => navigate('/fonts')} />
-        <MenuItem label="Colors" onPress={() => navigate('/colors')} />
+        <MenuItem
+          label={t`preferences`}
+          onPress={() => navigate('/settings')}
+        />
+        <MenuItem
+          label={t`fonts`}
+          onPress={() => navigate('/fonts')}
+        />
+        <MenuItem
+          label={t`colors`}
+          onPress={() => navigate('/colors')}
+        />
       </ModalMenu>
       <StatusBar hidden />
     </SafeAreaView>
