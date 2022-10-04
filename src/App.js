@@ -11,6 +11,7 @@ import {
 import {
   NanumBrushScript_400Regular as nanumBrushScript400Regular
 } from '@expo-google-fonts/nanum-brush-script'
+import { SpecialElite_400Regular } from '@expo-google-fonts/special-elite'
 import { getConfig } from './providers/cache'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -27,7 +28,8 @@ const AppLoader = () => {
   const [fontsLoaded] = useFonts({
     shareTechMono400Regular,
     frederickaTheGreat400Regular,
-    nanumBrushScript400Regular
+    nanumBrushScript400Regular,
+    SpecialElite_400Regular
   })
   const [configLoading, setConfigLoading] = React.useState(false)
   const { setTimeFormat } = useTimeFormat()

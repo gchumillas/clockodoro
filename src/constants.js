@@ -28,6 +28,7 @@ export const COLORS = {
 export const APP_FONTS = [
   'shareTechMono400Regular',
   'frederickaTheGreat400Regular',
+  'SpecialElite_400Regular',
   'nanumBrushScript400Regular'
 ]
 

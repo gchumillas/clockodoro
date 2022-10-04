@@ -1084,6 +1084,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/share-tech-mono/-/share-tech-mono-0.2.2.tgz#b6143c18d28f41d51875aca014b12ac39225bda5"
   integrity sha512-kf1XZ2XBa6IYZxFp1OT7SRLKjwQa6G6bQomdDpBHFWT1NXsMWeEaSFCyrSvpFOxVbtQde6BFI8mzsk4s7EW+Gg==
 
+"@expo-google-fonts/special-elite@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/special-elite/-/special-elite-0.2.2.tgz#fd3b446f09c9040a7ed4cb80f3b4af4f0b3786ee"
+  integrity sha512-74Yt+alpmjbR2WPbp5yOxkAhiCqlHuJqH2QOyahct6ny5GNxJkg/1pKyhmK1zTXJRBVH3fMNWtcDSqP8dn/EUg==
+
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
