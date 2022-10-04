@@ -21,9 +21,9 @@ import dayjs from '~/src/libs/dayjs'
 import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import IconButton from '~/src/components/buttons/IconButton'
 import BatteryIcon from '~/src/components/BatteryIcon'
-import TimeDisplay from '~/src/components/outputs/TimeDisplay'
+import TimeDisplay from '~/src/components/displays/TimeDisplay'
+import DateDisplay from '../components/displays/DateDisplay'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
-import DateDisplay from '../components/outputs/DateDisplay'
 
 const HomePage = () => {
   useKeepAwake()

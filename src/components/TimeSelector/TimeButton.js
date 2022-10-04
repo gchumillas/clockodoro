@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Pressable } from 'react-native'
 import dayjs from '~/src/libs/dayjs'
 import { BORDER_RADIUS, GAP } from '~/src/constants'
-import TimeDisplay from '~/src/components/outputs/TimeDisplay'
+import TimeDisplay from '~/src/components/displays/TimeDisplay'
 import { context } from './context'
 
 /**
