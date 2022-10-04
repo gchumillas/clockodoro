@@ -58,14 +58,13 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.box}>
+      <View style={styles.display}>
         <TimeDisplay
           value={time}
           color={timeColor}
           format={timeFormat}
           showSeconds={showSeconds}
           font={timeFont}
-          style={styles.time}
         />
         {showDate && (
           <DateDisplay value={time} color={timeColor} style={styles.date} />
@@ -96,12 +95,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: PALETTE.black
   },
-  box: {
+  display: {
     alignItems: 'center',
     paddingHorizontal: 4 * GAP
-  },
-  time: {
-    marginBottom: GAP
   },
   date: {
     marginBottom: 1.5 * GAP
