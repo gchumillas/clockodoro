@@ -20,9 +20,9 @@ import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
 import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import IconButton from '~/src/components/buttons/IconButton'
-import BatteryIcon from '~/src/components/BatteryIcon'
 import TimeDisplay from '~/src/components/displays/TimeDisplay'
 import DateDisplay from '../components/displays/DateDisplay'
+import BatteryIcon from '~/src/components/app/BatteryIcon'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
 const HomePage = () => {
