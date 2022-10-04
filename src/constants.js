@@ -29,6 +29,7 @@ export const APP_FONTS = [
   'shareTechMono400Regular',
   'frederickaTheGreat400Regular',
   'specialElite400Regular',
+  'play700Bold',
   'nanumBrushScript400Regular'
 ]
 

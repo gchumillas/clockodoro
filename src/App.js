@@ -14,6 +14,7 @@ import {
 import {
   SpecialElite_400Regular as specialElite400Regular
 } from '@expo-google-fonts/special-elite'
+import { Play_700Bold as play700Bold } from '@expo-google-fonts/play'
 import { getConfig } from './providers/cache'
 import {
   useTimeFormat,
@@ -36,7 +37,8 @@ const AppLoader = () => {
     shareTechMono400Regular,
     frederickaTheGreat400Regular,
     nanumBrushScript400Regular,
-    specialElite400Regular
+    specialElite400Regular,
+    play700Bold
   })
   const [configLoading, setConfigLoading] = React.useState(false)
   const { setTimeColor } = useTimeColor()

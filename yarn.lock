@@ -1079,6 +1079,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/nanum-brush-script/-/nanum-brush-script-0.2.2.tgz#dea15ca8ba35fb11452c5afdd054fdce17ab4ef9"
   integrity sha512-2FagyFvQB4Png8IBuVYb6OLSvfJyYJrJBufTFsL5KvypDjQhkcWNO0a881rUt+LqtIDbpt6BRGtrme+mRDvyrA==
 
+"@expo-google-fonts/play@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/play/-/play-0.2.2.tgz#420af117df79392eeaee50f96d78d8e94ea70223"
+  integrity sha512-+0yWbLFJM7Q2/+92eAb8hTEc/0Fvo8aeqV6EAyrUosAD3fM2E2BP6ukiUjq2Z3+mxpYNN2crT38jNlg2qJTtWA==
+
 "@expo-google-fonts/share-tech-mono@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/share-tech-mono/-/share-tech-mono-0.2.2.tgz#b6143c18d28f41d51875aca014b12ac39225bda5"
