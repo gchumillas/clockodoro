@@ -18,10 +18,10 @@ import {
 import { useBatteryLevel } from '~/src/libs/battery'
 import { useOrientation } from '~/src/libs/orientation'
 import dayjs from '~/src/libs/dayjs'
-import ModalMenu, { MenuItem } from '~/src/components/ModalMenu'
 import IconButton from '~/src/components/buttons/IconButton'
 import TimeDisplay from '~/src/components/displays/TimeDisplay'
 import DateDisplay from '../components/displays/DateDisplay'
+import ModalMenu, { MenuItem } from '~/src/components/app/ModalMenu'
 import BatteryIcon from '~/src/components/app/BatteryIcon'
 import SettingsIcon from '~/assets/icons/settings-icon.svg'
 
