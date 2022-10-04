@@ -78,7 +78,6 @@ const HomePage = () => {
         />
       )}
       <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
-        {/* TODO: use translations */}
         <MenuItem
           label={t`preferences`}
           onPress={() => navigate('/settings')}
