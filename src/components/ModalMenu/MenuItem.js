@@ -24,8 +24,8 @@ const MenuItem = ({ label, onPress }) => {
 const styles = StyleSheet.create({
   text: {
     color: PALETTE.black,
-    paddingVertical: 2 * GAP,
-    paddingHorizontal: 5 * GAP
+    paddingVertical: 2.5 * GAP,
+    paddingHorizontal: 6 * GAP
   }
 })
 
