@@ -6,8 +6,8 @@ import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
 } from '~/src/store/hooks'
 import RadioField, { RadioButton }
-  from '~/src/components/inputs/RadioField'
-import CheckboxField from '~/src/components/inputs/CheckboxField'
+  from '~/src/components/fields/RadioField'
+import CheckboxField from '~/src/components/fields/CheckboxField'
 import FormLayout from '~/src/layouts/FormLayout'
 import { saveConfig } from '~/src/providers/cache'
 
