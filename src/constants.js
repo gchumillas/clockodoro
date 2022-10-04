@@ -27,9 +27,9 @@ export const COLORS = {
 // Available fonts
 export const APP_FONTS = [
   'shareTechMono400Regular',
+  'play700Bold',
   'frederickaTheGreat400Regular',
   'specialElite400Regular',
-  'play700Bold',
   'nanumBrushScript400Regular'
 ]
 
