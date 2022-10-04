@@ -1074,6 +1074,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/fredericka-the-great/-/fredericka-the-great-0.2.2.tgz#ed69d1c4d3221e2a56296b95936a8bee8b59eb01"
   integrity sha512-BmHaQFp15D0KEFbUGiQfDm2B5IV41JQTsCyy2cTaWTqEuCqrraw6RdwJyAMrEjep3i4Sp+xlNStyWRX5UPt7oA==
 
+"@expo-google-fonts/nanum-brush-script@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/nanum-brush-script/-/nanum-brush-script-0.2.2.tgz#dea15ca8ba35fb11452c5afdd054fdce17ab4ef9"
+  integrity sha512-2FagyFvQB4Png8IBuVYb6OLSvfJyYJrJBufTFsL5KvypDjQhkcWNO0a881rUt+LqtIDbpt6BRGtrme+mRDvyrA==
+
 "@expo-google-fonts/share-tech-mono@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/share-tech-mono/-/share-tech-mono-0.2.2.tgz#b6143c18d28f41d51875aca014b12ac39225bda5"

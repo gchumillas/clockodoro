@@ -8,6 +8,9 @@ import {
 import {
   FrederickatheGreat_400Regular as frederickaTheGreat400Regular
 } from '@expo-google-fonts/fredericka-the-great'
+import {
+  NanumBrushScript_400Regular as nanumBrushScript400Regular
+} from '@expo-google-fonts/nanum-brush-script'
 import { getConfig } from './providers/cache'
 import {
   useTimeFormat, useShowSeconds, useShowDate, useShowBattery
@@ -23,7 +26,8 @@ import store from './store'
 const AppLoader = () => {
   const [fontsLoaded] = useFonts({
     shareTechMono400Regular,
-    frederickaTheGreat400Regular
+    frederickaTheGreat400Regular,
+    nanumBrushScript400Regular
   })
   const [configLoading, setConfigLoading] = React.useState(false)
   const { setTimeFormat } = useTimeFormat()
