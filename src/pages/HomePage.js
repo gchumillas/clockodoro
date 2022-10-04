@@ -27,7 +27,7 @@ import DateDisplay from '../components/outputs/DateDisplay'
 
 const HomePage = () => {
   useKeepAwake()
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation('home')
   const navigate = useNavigate()
   const orientation = useOrientation()
   const level = useBatteryLevel()
@@ -79,9 +79,18 @@ const HomePage = () => {
       )}
       <ModalMenu open={showModalMenu} onClose={() => setShowModalMenu(false)}>
         {/* TODO: use translations */}
-        <MenuItem label="Preferences" onPress={() => navigate('/settings')} />
-        <MenuItem label="Fonts" onPress={() => navigate('/fonts')} />
-        <MenuItem label="Colors" onPress={() => navigate('/colors')} />
+        <MenuItem
+          label={t`preferences`}
+          onPress={() => navigate('/settings')}
+        />
+        <MenuItem
+          label={t`fonts`}
+          onPress={() => navigate('/fonts')}
+        />
+        <MenuItem
+          label={t`colors`}
+          onPress={() => navigate('/colors')}
+        />
       </ModalMenu>
       <StatusBar hidden />
     </SafeAreaView>
