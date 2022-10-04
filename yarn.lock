@@ -1069,11 +1069,6 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@expo-google-fonts/audiowide@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/audiowide/-/audiowide-0.2.2.tgz#5ef52c9dd5040ae99a17f12e94bae4e4da40b36a"
-  integrity sha512-zQRsCo4wqTPXt85xrYYs2EVc1JTIKebKz/kLzTvSX+oXMlV8yNatjVeztPBGEsYNeLq1IRcLxISVEfU33E9vaQ==
-
 "@expo-google-fonts/fredericka-the-great@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/fredericka-the-great/-/fredericka-the-great-0.2.2.tgz#ed69d1c4d3221e2a56296b95936a8bee8b59eb01"
