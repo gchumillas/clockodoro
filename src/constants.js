@@ -34,9 +34,9 @@ export const APP_FONTS = [
 
 export const APP_COLORS = [
   PALETTE.slate300,
-  PALETTE.red300,
+  PALETTE.sky300,
   PALETTE.green300,
-  PALETTE.sky300
+  PALETTE.red300
 ]
 
 // System font
