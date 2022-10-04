@@ -4,6 +4,7 @@ import { APP_COLORS } from '~/src/constants'
 import {
   useTimeColor, useTimeFont, useTimeFormat, useShowSeconds
 } from '~/src/store/hooks'
+import { saveConfig } from '~/src/providers/cache'
 import FormLayout from '~/src/layouts/FormLayout'
 import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
@@ -15,6 +16,7 @@ const ColorsPage = () => {
   const { showSeconds } = useShowSeconds()
 
   const doSave = () => {
+    saveConfig({ timeColor })
     navigate('/')
   }
 

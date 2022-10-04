@@ -35,6 +35,7 @@ module.exports = {
     'eqeqeq': 'off',
     'semi': ['error', 'never'],
     'quotes': ['error', 'single'],
+    'camelcase': 'warn',
     'jsx-quotes': ['error', 'prefer-double'],
     'no-unused-vars': [
       'warn',

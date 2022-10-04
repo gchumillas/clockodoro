@@ -8,6 +8,9 @@ import { context } from './context'
 /**
  * @param {object} params
  * @param {string} params.value
+ * @param {string} params.color
+ * @param {'am_pm' | '24h'} params.format
+ * @param {number} params.showSeconds
  */
 const TimeButton = ({ value, color, font, format, showSeconds }) => {
   const { value: contextValue, onChange } = React.useContext(context)
@@ -18,6 +21,7 @@ const TimeButton = ({ value, color, font, format, showSeconds }) => {
       onPress={() => onChange(value)}
       style={({ pressed }) => ({
         ...styles.root,
+        borderColor: color,
         opacity: value == contextValue
           ? (pressed ? 0.9 : 1)
           : (pressed ? 0.4 : 0.3)
@@ -41,7 +45,6 @@ const styles = StyleSheet.create({
     padding: GAP,
     marginBottom: GAP,
     borderWidth: 2,
-    borderColor: 'white',
     borderRadius: BORDER_RADIUS
   }
 })

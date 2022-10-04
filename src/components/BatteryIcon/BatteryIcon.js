@@ -10,8 +10,9 @@ import Battery100Icon from '~/assets/icons/battery-100-icon.svg'
 /**
  * @param {object} params
  * @param {number} params.value A number between 0 and 100
+ * @param {string} params.color
  */
-const BatteryIcon = ({ value }) => {
+const BatteryIcon = ({ value, color }) => {
   const level = React.useMemo(() => {
     if (value < 12.5) {
       return 'empty'
@@ -26,24 +27,24 @@ const BatteryIcon = ({ value }) => {
     return 'full'
   }, [value])
 
-  const color = value > 20 ? COLORS.base : COLORS.alert
+  const buttonColor = value > 20 ? color : COLORS.alert
 
   return (
     <View>
       {level == 'empty' && (
-        <Battery0Icon width={36} height={32} fill={color} />
+        <Battery0Icon width={36} height={32} fill={buttonColor} />
       )}
       {level == 'low' && (
-        <Battery25Icon width={36} height={32} fill={color} />
+        <Battery25Icon width={36} height={32} fill={buttonColor} />
       )}
       {level == 'medium' && (
-        <Battery50Icon width={36} height={32} fill={color} />
+        <Battery50Icon width={36} height={32} fill={buttonColor} />
       )}
       {level == 'high' && (
-        <Battery75Icon width={36} height={32} fill={color} />
+        <Battery75Icon width={36} height={32} fill={buttonColor} />
       )}
       {level == 'full' && (
-        <Battery100Icon width={36} height={32} fill={color} />
+        <Battery100Icon width={36} height={32} fill={buttonColor} />
       )}
     </View>
   )

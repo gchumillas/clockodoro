@@ -6,17 +6,23 @@ import {
   ShareTechMono_400Regular as shareTechMono400Regular
 } from '@expo-google-fonts/share-tech-mono'
 import {
-  Audiowide_400Regular as audiowide400Regular
-} from '@expo-google-fonts/audiowide'
-import {
   FrederickatheGreat_400Regular as frederickaTheGreat400Regular
 } from '@expo-google-fonts/fredericka-the-great'
 import {
-  Rye_400Regular as rye400Regular
-} from '@expo-google-fonts/rye'
+  NanumBrushScript_400Regular as nanumBrushScript400Regular
+} from '@expo-google-fonts/nanum-brush-script'
+import {
+  SpecialElite_400Regular as specialElite400Regular
+} from '@expo-google-fonts/special-elite'
+import { Play_700Bold as play700Bold } from '@expo-google-fonts/play'
 import { getConfig } from './providers/cache'
 import {
-  useTimeFormat, useShowSeconds, useShowDate, useShowBattery
+  useTimeFormat,
+  useShowSeconds,
+  useShowDate,
+  useShowBattery,
+  useTimeColor,
+  useTimeFont
 } from './store/hooks'
 import Loading from './components/Loading'
 import HomePage from './pages/HomePage'
@@ -29,11 +35,14 @@ import store from './store'
 const AppLoader = () => {
   const [fontsLoaded] = useFonts({
     shareTechMono400Regular,
-    audiowide400Regular,
     frederickaTheGreat400Regular,
-    rye400Regular
+    nanumBrushScript400Regular,
+    specialElite400Regular,
+    play700Bold
   })
   const [configLoading, setConfigLoading] = React.useState(false)
+  const { setTimeColor } = useTimeColor()
+  const { setTimeFont } = useTimeFont()
   const { setTimeFormat } = useTimeFormat()
   const { setShowSeconds } = useShowSeconds()
   const { setShowDate } = useShowDate()
@@ -43,6 +52,8 @@ const AppLoader = () => {
     setConfigLoading(true)
     getConfig()
       .then((config) => {
+        setTimeColor(config.timeColor)
+        setTimeFont(config.timeFont)
         setTimeFormat(config.timeFormat)
         setShowSeconds(config.showSeconds)
         setShowDate(config.showDate)

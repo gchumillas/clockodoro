@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP, COLORS
+  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP
 } from '~/src/constants'
 import {
   useTimeColor,
@@ -58,23 +58,22 @@ const HomePage = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.box}>
+      <View style={styles.display}>
         <TimeDisplay
           value={time}
           color={timeColor}
           format={timeFormat}
           showSeconds={showSeconds}
           font={timeFont}
-          style={styles.time}
         />
         {showDate && (
           <DateDisplay value={time} color={timeColor} style={styles.date} />
         )}
-        {showBattery && <BatteryIcon value={100 * level} />}
+        {showBattery && <BatteryIcon value={100 * level} color={timeColor} />}
       </View>
       {orientation == 'portrait' && (
         <IconButton
-          icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
+          icon={<SettingsIcon width={36} height={32} fill={timeColor} />}
           onPress={() => setShowModalMenu(true)}
         />
       )}
@@ -96,12 +95,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     backgroundColor: PALETTE.black
   },
-  box: {
+  display: {
     alignItems: 'center',
     paddingHorizontal: 4 * GAP
-  },
-  time: {
-    marginBottom: GAP
   },
   date: {
     marginBottom: 1.5 * GAP

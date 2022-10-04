@@ -25,19 +25,19 @@ export const COLORS = {
  */
 
 // Available fonts
-// TODO: rename to APP_FONTS
-export const FONTS = [
+export const APP_FONTS = [
   'shareTechMono400Regular',
-  'audiowide400Regular',
   'frederickaTheGreat400Regular',
-  'rye400Regular'
+  'specialElite400Regular',
+  'play700Bold',
+  'nanumBrushScript400Regular'
 ]
 
 export const APP_COLORS = [
   PALETTE.slate300,
-  PALETTE.red300,
+  PALETTE.sky300,
   PALETTE.green300,
-  PALETTE.sky300
+  PALETTE.red300
 ]
 
 // System font
