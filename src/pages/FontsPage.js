@@ -8,7 +8,7 @@ import {
 import { APP_FONTS, COLORS } from '~/src/constants'
 import { saveConfig } from '~/src/providers/cache'
 import FormLayout from '~/src/layouts/FormLayout'
-import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
+import TimeSelector, { TimeButton } from '~/src/components/app/TimeSelector'
 
 const FontsPage = () => {
   const navigate = useNavigate()
