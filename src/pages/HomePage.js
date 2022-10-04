@@ -74,7 +74,7 @@ const HomePage = () => {
       </View>
       {orientation == 'portrait' && (
         <IconButton
-          icon={<SettingsIcon width={36} height={32} fill={COLORS.base} />}
+          icon={<SettingsIcon width={36} height={32} fill={timeColor} />}
           onPress={() => setShowModalMenu(true)}
         />
       )}
