@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useKeepAwake } from 'expo-keep-awake'
 import { StatusBar } from 'expo-status-bar'
 import {
-  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP, COLORS
+  PALETTE, SUPPORTED_LANGUAGES, FALLBACK_LANGUAGE, GAP
 } from '~/src/constants'
 import {
   useTimeColor,
