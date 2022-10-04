@@ -8,6 +8,9 @@ import { context } from './context'
 /**
  * @param {object} params
  * @param {string} params.value
+ * @param {string} params.color
+ * @param {'am_pm' | '24h'} params.format
+ * @param {number} params.showSeconds
  */
 const TimeButton = ({ value, color, font, format, showSeconds }) => {
   const { value: contextValue, onChange } = React.useContext(context)
