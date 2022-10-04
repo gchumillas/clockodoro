@@ -1074,11 +1074,6 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/fredericka-the-great/-/fredericka-the-great-0.2.2.tgz#ed69d1c4d3221e2a56296b95936a8bee8b59eb01"
   integrity sha512-BmHaQFp15D0KEFbUGiQfDm2B5IV41JQTsCyy2cTaWTqEuCqrraw6RdwJyAMrEjep3i4Sp+xlNStyWRX5UPt7oA==
 
-"@expo-google-fonts/rye@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/rye/-/rye-0.2.2.tgz#449aab588043c48b4ca59a0aed0b8f246315cda9"
-  integrity sha512-4TLn0bgbs3mdjVDv2U/725uGipN93aDnb/KCYmdz98krknIija/noOBd5I1VWnUz7smcnHT2sxrewKL3qDKcJA==
-
 "@expo-google-fonts/share-tech-mono@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/share-tech-mono/-/share-tech-mono-0.2.2.tgz#b6143c18d28f41d51875aca014b12ac39225bda5"

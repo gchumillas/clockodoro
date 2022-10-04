@@ -28,8 +28,7 @@ export const COLORS = {
 // TODO: rename to APP_FONTS
 export const FONTS = [
   'shareTechMono400Regular',
-  'frederickaTheGreat400Regular',
-  'rye400Regular'
+  'frederickaTheGreat400Regular'
 ]
 
 export const APP_COLORS = [
