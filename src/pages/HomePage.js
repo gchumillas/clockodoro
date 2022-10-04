@@ -70,7 +70,7 @@ const HomePage = () => {
         {showDate && (
           <DateDisplay value={time} color={timeColor} style={styles.date} />
         )}
-        {showBattery && <BatteryIcon value={100 * level} />}
+        {showBattery && <BatteryIcon value={100 * level} color={timeColor} />}
       </View>
       {orientation == 'portrait' && (
         <IconButton
