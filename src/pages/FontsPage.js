@@ -6,7 +6,7 @@ import {
   useTimeFormat,
   useShowSeconds
 } from '~/src/store/hooks'
-import { FONTS } from '~/src/constants'
+import { APP_FONTS } from '~/src/constants'
 import FormLayout from '~/src/layouts/FormLayout'
 import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
@@ -24,7 +24,7 @@ const FontsPage = () => {
   return (
     <FormLayout onSave={doSave}>
       <TimeSelector value={timeFont} onChange={setTimeFont}>
-        {FONTS.map((font) => (
+        {APP_FONTS.map((font) => (
           <TimeButton
             key={font}
             value={font}

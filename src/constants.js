@@ -25,8 +25,7 @@ export const COLORS = {
  */
 
 // Available fonts
-// TODO: rename to APP_FONTS
-export const FONTS = [
+export const APP_FONTS = [
   'shareTechMono400Regular',
   'frederickaTheGreat400Regular'
 ]
