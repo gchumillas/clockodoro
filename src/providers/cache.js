@@ -1,19 +1,33 @@
 import * as ss from 'expo-secure-store'
-import { AM_PM, H24, DEFAULT_CONFIG } from '~/src/constants'
+import { AM_PM, H24, DEFAULT_CONFIG, APP_FONTS } from '~/src/constants'
 
 /**
- * @returns {{
+ * @returns {Promise<{
  *  timeFormat: string,
  *  showSeconds: boolean,
  *  showDate: boolean,
  *  showBattery: boolean
- * }}
+ * }>}
  */
 export const getConfig = async () => {
   const value = await ss.getItemAsync('config')
   let config = JSON.parse(value)
   if (config === null || typeof config != 'object') {
     config = {}
+  }
+
+  if (
+    typeof config.timeColor != 'string' ||
+    !config.timeColor.match(/^#[0-9A-F]{6}$/i)
+  ) {
+    config.timeColor = DEFAULT_CONFIG.timeColor
+  }
+
+  if (
+    typeof config.timeFont != 'string' ||
+    !APP_FONTS.includes(config.timeFont)
+  ) {
+    config.timeFont = DEFAULT_CONFIG.timeFont
   }
 
   if (
@@ -40,11 +54,14 @@ export const getConfig = async () => {
 
 /**
  * @param {object} config
- * @param {string} config.timeFormat
- * @param {boolean} config.showSeconds
- * @param {boolean} config.showDate
- * @param {boolean} config.showBattery
+ * @param {string} [config.timeColor]
+ * @param {string} [config.timeFont]
+ * @param {string} [config.timeFormat]
+ * @param {boolean} [config.showSeconds]
+ * @param {boolean} [config.showDate]
+ * @param {boolean} [config.showBattery]
  */
-export const saveConfig = (config) => {
-  return ss.setItemAsync('config', JSON.stringify(config))
+export const saveConfig = async (config) => {
+  const cfg = await getConfig()
+  return ss.setItemAsync('config', JSON.stringify({ ...cfg, ...config }))
 }

@@ -6,6 +6,7 @@ import {
   useShowSeconds
 } from '~/src/store/hooks'
 import { APP_FONTS, COLORS } from '~/src/constants'
+import { saveConfig } from '~/src/providers/cache'
 import FormLayout from '~/src/layouts/FormLayout'
 import TimeSelector, { TimeButton } from '~/src/components/TimeSelector'
 
@@ -16,6 +17,7 @@ const FontsPage = () => {
   const { showSeconds } = useShowSeconds()
 
   const doSave = () => {
+    saveConfig({ timeFont })
     navigate('/')
   }
 

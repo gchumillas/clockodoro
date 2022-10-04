@@ -16,7 +16,12 @@ import {
 } from '@expo-google-fonts/special-elite'
 import { getConfig } from './providers/cache'
 import {
-  useTimeFormat, useShowSeconds, useShowDate, useShowBattery
+  useTimeFormat,
+  useShowSeconds,
+  useShowDate,
+  useShowBattery,
+  useTimeColor,
+  useTimeFont
 } from './store/hooks'
 import Loading from './components/Loading'
 import HomePage from './pages/HomePage'
@@ -34,6 +39,8 @@ const AppLoader = () => {
     specialElite400Regular
   })
   const [configLoading, setConfigLoading] = React.useState(false)
+  const { setTimeColor } = useTimeColor()
+  const { setTimeFont } = useTimeFont()
   const { setTimeFormat } = useTimeFormat()
   const { setShowSeconds } = useShowSeconds()
   const { setShowDate } = useShowDate()
@@ -43,6 +50,8 @@ const AppLoader = () => {
     setConfigLoading(true)
     getConfig()
       .then((config) => {
+        setTimeColor(config.timeColor)
+        setTimeFont(config.timeFont)
         setTimeFormat(config.timeFormat)
         setShowSeconds(config.showSeconds)
         setShowDate(config.showDate)
