@@ -95,37 +95,37 @@ yarn start
    ```
 3. Edit the [App.js](src/App.js) file and include the font:
    ```diff
-   import React from 'react'
-   import { NativeRouter, Routes, Route } from 'react-router-native'
-   import { Provider } from 'react-redux'
-   import { useFonts } from 'expo-font'
+     import React from 'react'
+     import { NativeRouter, Routes, Route } from 'react-router-native'
+     import { Provider } from 'react-redux'
+     import { useFonts } from 'expo-font'
    + import {
-   +  AveriaLibre_400Regular as averiaLibre400Regular
-   +} from '@expo-google-fonts/averia-libre'
-   // more import libraries ...
+   +   AveriaLibre_400Regular as averiaLibre400Regular
+   + } from '@expo-google-fonts/averia-libre'
+     // more import libraries ...
 
-   const AppLoader = () => {
-     const [fontsLoaded] = useFonts({
-       shareTechMono400Regular,
-       frederickaTheGreat400Regular,
-       nanumBrushScript400Regular,
-       specialElite400Regular,
-       play700Bold,
-   +    averiaLibre400Regular
-     })
-     // more code ...
+     const AppLoader = () => {
+       const [fontsLoaded] = useFonts({
+         shareTechMono400Regular,
+         frederickaTheGreat400Regular,
+         nanumBrushScript400Regular,
+         specialElite400Regular,
+         play700Bold,
+   +     averiaLibre400Regular
+       })
+       // more code ...
    ```
   4. Edit the [constants.js](src/constants.js) file and add the font:
      ```diff
-     // ... code ...
-     export const APP_FONTS = [
-       'shareTechMono400Regular',
-       'play700Bold',
-       'frederickaTheGreat400Regular',
-       'specialElite400Regular',
-       'nanumBrushScript400Regular',
-     +  'averiaLibre400Regular'
-     ]
+      // ... code ...
+       export const APP_FONTS = [
+         'shareTechMono400Regular',
+         'play700Bold',
+         'frederickaTheGreat400Regular',
+         'specialElite400Regular',
+         'nanumBrushScript400Regular',
+     +   'averiaLibre400Regular'
+       ]
      ```
   5. Compile and run the app into iOS or Andrid simulators:
      ```bash
