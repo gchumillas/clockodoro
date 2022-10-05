@@ -4,6 +4,16 @@
 
 A beautiful digital clock made in React Native.
 
+## Features
+
+- Landscape and portrait mode.
+- Multiple fonts.
+- Multiple colors.
+- Battery indicator.
+- English and Spanish languages.
+- AM | PM and 24h formats.
+- Keep the screen awake.
+
 ## Installation
 
 Download and install the libraries:
@@ -23,16 +33,6 @@ Once the app is installed into the simulator, you can start the Expo server and 
 ```bash
 yarn start
 ```
-
-## Features
-
-- Landscape and portrait mode.
-- Multiple fonts.
-- Multiple colors.
-- Battery indicator.
-- English and Spanish languages.
-- AM | PM and 24h formats.
-- Keep the screen awake.
 
 ## Directory Structure
 
