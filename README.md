@@ -85,3 +85,52 @@ yarn lint
 # run Expo server to start and debug the app
 yarn start
 ```
+
+## Install a new font
+
+1. Go to [Google Fonts](https://fonts.google.com/) and choose a beautiful font.
+2. For example, lets install [Averia Libre](https://fonts.google.com/specimen/Averia+Libre?category=Display&preview.text=11:54%20am&preview.text_type=custom):
+   ```bash
+   yarn add @expo-google-fonts/averia-libre
+   ```
+3. Edit the [App.js](src/App.js) file and include the font:
+   ```diff
+   import React from 'react'
+   import { NativeRouter, Routes, Route } from 'react-router-native'
+   import { Provider } from 'react-redux'
+   import { useFonts } from 'expo-font'
+   + import {
+   +  AveriaLibre_400Regular as averiaLibre400Regular
+   +} from '@expo-google-fonts/averia-libre'
+   // more import libraries ...
+
+   const AppLoader = () => {
+     const [fontsLoaded] = useFonts({
+       shareTechMono400Regular,
+       frederickaTheGreat400Regular,
+       nanumBrushScript400Regular,
+       specialElite400Regular,
+       play700Bold,
+   +    averiaLibre400Regular
+     })
+     // more code ...
+   ```
+  4. Edit the [constants.js](src/constants.js) file and add the font:
+     ```diff
+     // ... code ...
+     export const APP_FONTS = [
+       'shareTechMono400Regular',
+       'play700Bold',
+       'frederickaTheGreat400Regular',
+       'specialElite400Regular',
+       'nanumBrushScript400Regular',
+     +  'averiaLibre400Regular'
+     ]
+     ```
+  5. Compile and run the app into iOS or Andrid simulators:
+     ```bash
+     yarn ios     # compile and run into iOS [OR]
+     yarn android # compile and run into Android
+     ```
+
+And that's all! Your beautiful font is now available from the app.
