@@ -54,7 +54,7 @@ src     -- Source code files
 
 - (*) Some components can be reused in other applications, such as text fields, radio buttons, etc. And others don't. The `src/components/app` folder contains the components that are "app specific".
 - (**) A "page" is a special type of component used to present "pages". These components are registered in the routing system (see [App.js](/src/App.js)).
-- (***) A "provider" is any function that obtains information from an asynchronous resource, such as the System Cache or an external API.
+- (***) A "provider" is any function that submits or requests information from an asynchronous resource, such as the System Cache or an external API.
 
 ## Relevant libraries
 
