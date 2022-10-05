@@ -42,19 +42,19 @@ ios     -- iOS app
 assets  -- Images, icons, etc.
 src     -- Source code files
   components -- Shareable components
-    app      -- App specific components (*)
+    app      -- App specific components [1]
   intl       -- Translations
   layouts    -- Page layouts
   libs       -- Libraries
-  pages      -- Pages (**)
-  providers  -- Providers (***)
+  pages      -- Pages [2]
+  providers  -- Providers [3]
   store      -- Redux store
   App.js     -- Entry point
 ```
 
-- (*) Some components can be reused in other applications, such as text fields, radio buttons, etc. And others don't. The `src/components/app` folder contains the components that are "app specific".
-- (**) A "page" is a special type of component used to present "pages". These components are registered in the routing system (see [App.js](/src/App.js)).
-- (***) A "provider" is any function that submits or requests information from an asynchronous resource, such as the System Cache or an external API.
+- [1] Some components can be reused in other applications, such as text fields, radio buttons, etc. And others don't. The `src/components/app` folder contains the components that are "app specific".
+- [2] A "page" is a special type of component used to present "pages". These components are registered in the routing system (see [App.js](/src/App.js)).
+- [3] A "provider" is any function that sends or gets information from an asynchronous resource, such as the System Cache or an external API.
 
 ## Relevant libraries
 
