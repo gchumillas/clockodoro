@@ -1,6 +1,6 @@
 <a href="https://apps.apple.com/app/clockodoro/id6443605878"><img src="https://user-images.githubusercontent.com/5312427/194015966-ac0baddf-69ca-4a0b-a194-62364bb5f28f.svg" height="40" alt="Download on the Apple Store" /></a><br>
 
-[foto here]
+![concept](https://user-images.githubusercontent.com/5312427/194026629-892dc38b-6a95-4cbd-af89-0d36f35aa88c.jpg)
 
 A beautiful digital clock made in React Native.
 
