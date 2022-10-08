@@ -1,5 +1,18 @@
 import * as ss from 'expo-secure-store'
-import { AM_PM, H24, DEFAULT_CONFIG, APP_FONTS } from '~/src/constants'
+import { fix, parse, pipes } from '@gchumillas/schema-fixer'
+import {
+  AM_PM, H24, DEFAULT_CONFIG, APP_FONTS, APP_COLORS
+} from '~/src/constants'
+
+const { select, boolean } = pipes
+const configSchema = {
+  timeFormat: select({ options: [H24, AM_PM] }),
+  timeFont: select({ options: APP_FONTS }),
+  timeColor: select({ options: APP_COLORS }),
+  showSeconds: boolean({ require: true }),
+  showDate: boolean({ require: true }),
+  showBattery: boolean({ require: true })
+}
 
 /**
  * @returns {Promise<{
@@ -11,44 +24,10 @@ import { AM_PM, H24, DEFAULT_CONFIG, APP_FONTS } from '~/src/constants'
  */
 export const getConfig = async () => {
   const value = await ss.getItemAsync('config')
-  let config = JSON.parse(value)
-  if (config === null || typeof config != 'object') {
-    config = {}
+  const [config, errors] = parse(JSON.parse(value), configSchema)
+  if (errors.length) {
+    return DEFAULT_CONFIG
   }
-
-  if (
-    typeof config.timeColor != 'string' ||
-    !config.timeColor.match(/^#[0-9A-F]{6}$/i)
-  ) {
-    config.timeColor = DEFAULT_CONFIG.timeColor
-  }
-
-  if (
-    typeof config.timeFont != 'string' ||
-    !APP_FONTS.includes(config.timeFont)
-  ) {
-    config.timeFont = DEFAULT_CONFIG.timeFont
-  }
-
-  if (
-    typeof config.timeFormat != 'string' ||
-    ![H24, AM_PM].includes(config.timeFormat)
-  ) {
-    config.timeFormat = DEFAULT_CONFIG.timeFormat
-  }
-
-  if (typeof config.showSeconds != 'boolean') {
-    config.showSeconds = DEFAULT_CONFIG.showSeconds
-  }
-
-  if (typeof config.showDate != 'boolean') {
-    config.showDate = DEFAULT_CONFIG.showDate
-  }
-
-  if (typeof config.showBattery != 'boolean') {
-    config.showBattery = DEFAULT_CONFIG.showBattery
-  }
-
   return config
 }
 
@@ -63,5 +42,6 @@ export const getConfig = async () => {
  */
 export const saveConfig = async (config) => {
   const cfg = await getConfig()
-  return ss.setItemAsync('config', JSON.stringify({ ...cfg, ...config }))
+  const fixedConfig = fix({ ...cfg, ...config }, configSchema)
+  return ss.setItemAsync('config', JSON.stringify(fixedConfig))
 }
