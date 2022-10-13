@@ -1,4 +1,4 @@
-<a href="https://apps.apple.com/app/clockodoro/id6443605878"><img src="https://user-images.githubusercontent.com/5312427/194015966-ac0baddf-69ca-4a0b-a194-62364bb5f28f.svg" height="40" alt="Download on the Apple Store" /></a><br>
+<a href="https://apps.apple.com/app/clockodoro/id6443605878"><img src="https://user-images.githubusercontent.com/5312427/194015966-ac0baddf-69ca-4a0b-a194-62364bb5f28f.svg" height="40" alt="Download on the Apple Store" /></a> <a href="https://play.google.com/store/apps/details?id=com.retroclock"><img src="https://user-images.githubusercontent.com/5312427/158222275-11ce2126-cb8f-4dfc-b415-812cfd5a75bd.svg" height="40" alt="Get it on Google Play" /></a><br>
 
 ![concept](https://user-images.githubusercontent.com/5312427/194026629-892dc38b-6a95-4cbd-af89-0d36f35aa88c.jpg)
 
