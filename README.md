@@ -1,11 +1,11 @@
 <a href="https://apps.apple.com/app/clockodoro/id6443605878"><img src="https://user-images.githubusercontent.com/5312427/194015966-ac0baddf-69ca-4a0b-a194-62364bb5f28f.svg" height="40" alt="Download on the Apple Store" /></a> <a href="https://play.google.com/store/apps/details?id=com.retroclock"><img src="https://user-images.githubusercontent.com/5312427/195692618-3bd8611b-1f56-4a70-bbe5-709e7bb79bf4.svg" height="40" alt="Get it on Google Play" />
 </a><br>
 
-![image5](https://user-images.githubusercontent.com/5312427/195693998-c4e64152-c879-4e94-9e37-82650fc9ab88.png)
+![image1](https://user-images.githubusercontent.com/5312427/195693998-c4e64152-c879-4e94-9e37-82650fc9ab88.png)
 ![image2](https://user-images.githubusercontent.com/5312427/195693995-cb19ac77-d0cc-4c70-83d0-e8ec9c71e095.png)
-![image1](https://user-images.githubusercontent.com/5312427/195693993-789456dc-b65e-476b-9d98-b959a0e51a2c.png)
-![image3](https://user-images.githubusercontent.com/5312427/195693996-67749ac2-2b32-4960-81d3-deb69e0222aa.png)
-![image4](https://user-images.githubusercontent.com/5312427/195693997-8078630b-76b1-44e4-be78-6a1cd28fa1fa.png)
+![image3](https://user-images.githubusercontent.com/5312427/195693993-789456dc-b65e-476b-9d98-b959a0e51a2c.png)
+![image4](https://user-images.githubusercontent.com/5312427/195693996-67749ac2-2b32-4960-81d3-deb69e0222aa.png)
+![image5](https://user-images.githubusercontent.com/5312427/195693997-8078630b-76b1-44e4-be78-6a1cd28fa1fa.png)
 
 ## Features
 
