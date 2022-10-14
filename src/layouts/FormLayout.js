@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     padding: 2 * GAP,
-    paddingTop: 4 * GAP,
+    paddingTop: 6 * GAP,
     backgroundColor: PALETTE.black
   },
   body: {
