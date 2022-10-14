@@ -65,6 +65,7 @@ const HomePage = () => {
           format={timeFormat}
           showSeconds={showSeconds}
           font={timeFont}
+          style={styles.time}
         />
         {showDate && (
           <DateDisplay value={time} color={timeColor} style={styles.date} />
@@ -107,8 +108,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 4 * GAP
   },
+  time: {
+    marginBottom: GAP
+  },
   date: {
-    marginBottom: 1.5 * GAP
+    marginBottom: 2.5 * GAP
   }
 })
 
