@@ -1,5 +1,7 @@
 import React from 'react'
-import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native'
+import {
+  SafeAreaView, ScrollView, StyleSheet, View, Platform, StatusBar as RNStatusBar
+} from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { StatusBar } from 'expo-status-bar'
 import { PALETTE, GAP } from '~/src/constants'
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     padding: 2 * GAP,
-    paddingTop: 6 * GAP,
+    paddingTop: Platform.OS == 'android' ? RNStatusBar.currentHeight : GAP,
     backgroundColor: PALETTE.black
   },
   body: {
