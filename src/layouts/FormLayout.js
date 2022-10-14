@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     padding: 2 * GAP,
-    paddingTop: Platform.OS == 'android' ? RNStatusBar.currentHeight : GAP,
+    paddingTop: GAP + (Platform.OS == 'ios' ? 0 : RNStatusBar.currentHeight),
     backgroundColor: PALETTE.black
   },
   body: {
