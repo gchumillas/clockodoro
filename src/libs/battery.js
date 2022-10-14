@@ -10,12 +10,13 @@ export const useBatteryLevel = () => {
   const [level, setLevel] = React.useState(-1)
 
   React.useEffect(() => {
-    const listener = Battery.addBatteryLevelListener(({ batteryLevel }) => {
-      setLevel(batteryLevel)
-    })
+    // checks the battery level every minute
+    const interval = setInterval(() => {
+      Battery.getBatteryLevelAsync().then(setLevel)
+    }, 60000)
 
     Battery.getBatteryLevelAsync().then(setLevel)
-    return () => listener.remove()
+    return () => clearInterval(interval)
   }, [])
 
   return level
