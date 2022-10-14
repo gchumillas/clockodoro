@@ -5,6 +5,8 @@
 ![image2](https://user-images.githubusercontent.com/5312427/195693993-789456dc-b65e-476b-9d98-b959a0e51a2c.png)
 ![image3](https://user-images.githubusercontent.com/5312427/195693996-67749ac2-2b32-4960-81d3-deb69e0222aa.png)
 
+Replace your old phone into a Digital Clock!
+
 ## Features
 
 - Landscape and portrait mode.
