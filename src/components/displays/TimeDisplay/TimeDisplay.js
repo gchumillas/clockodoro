@@ -1,5 +1,6 @@
 import React from 'react'
 import { AM_PM } from '~/src/constants'
+import { useOrientation } from '~/src/libs/orientation'
 import Text from '~/src/components/displays/Text'
 
 /**
@@ -20,6 +21,10 @@ const TimeDisplay = ({
   style = {}
 }) => {
   const [text, setText] = React.useState('')
+  const orientation = useOrientation()
+  const textWidth = React.useMemo(() => {
+    return orientation == 'portrait' ? 70 : 80
+  }, [orientation])
 
   const timeFormat = React.useMemo(() => {
     if (format == AM_PM) {
@@ -34,7 +39,7 @@ const TimeDisplay = ({
   }, [value, timeFormat])
 
   return (
-    <Text fontSize={75} style={{ ...style, color, fontFamily: font }}>
+    <Text fontSize={textWidth} style={{ ...style, color, fontFamily: font }}>
       {text}
     </Text>
   )
