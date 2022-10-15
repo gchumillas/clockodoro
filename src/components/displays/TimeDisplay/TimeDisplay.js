@@ -23,7 +23,7 @@ const TimeDisplay = ({
   const [text, setText] = React.useState('')
   const orientation = useOrientation()
   const textWidth = React.useMemo(() => {
-    return orientation == 'portrait' ? 70 : 80
+    return orientation == 'portrait' ? 65 : 75
   }, [orientation])
 
   const timeFormat = React.useMemo(() => {

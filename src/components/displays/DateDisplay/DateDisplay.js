@@ -15,7 +15,7 @@ const DateDisplay = ({ value, color, style = {} }) => {
   }, [value])
 
   return (
-    <Text style={{ ...style, color }}>
+    <Text fontSize={20} style={{ ...style, color }}>
       {text}
     </Text>
   )
