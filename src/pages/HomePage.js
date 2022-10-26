@@ -51,6 +51,9 @@ const HomePage = () => {
 
   React.useEffect(() => {
     const updateTime = () => setTime(dayjs())
+    // setInterval is not precise enough in some devices
+    // so I decided to use 1/3 seconds (approx. 333 milliseconds)
+    // to always show an accurate time
     const i = setInterval(() => updateTime(), 333)
     updateTime()
     return () => clearInterval(i)
